@@ -1,0 +1,72 @@
+header {
+    position: fixed;
+    width: calc(100vw - 40px);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+}
+
+#logo {
+    font-size: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0px 5px;
+}
+
+header nav ul li a {
+    margin: 0px 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.neum_button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #181b1f, #14171a);
+    box-shadow: 2px 2px 5px #090a0c,
+        -2px -2px 5px #23282e;
+}
+
+.neum_button:hover {
+    background: linear-gradient(145deg, #14171a, #181b1f);
+}
+
+.neum_button:active {
+    background: var(--bg);
+    box-shadow: inset 10px 10px 20px #090a0c,
+        inset -10px -10px 20px #23282e,
+        -2px -2px 5px #090a0c,
+        2px 2px 5px #23282e;
+}
+
+.email_icon {
+    color: #EE5335;
+}
+
+.noti_icon {
+    color: #F5AB41;
+}
+
+.settings_icon {
+    color: #4BB9DA;
+}
