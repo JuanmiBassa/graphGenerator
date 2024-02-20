@@ -8,8 +8,10 @@
     --bg: #191d22;
     --bg-container: #1d212b;
 
-    --primary-color: #6FF3AA;
-    
+    --primary-color: #30f388;
+    --pry-orange: #ff3c00;
+    --pry-blue: #2f77d6; 
+
 }
 
 body {
@@ -126,4 +128,8 @@ header nav ul li a {
 /* MAIN */
 main {
     margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

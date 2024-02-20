@@ -12,8 +12,10 @@ i18n
           navTest: 'Test it',
 
           // APP
-
+          
+          
           // TEST
+          titleTest: 'Test the program',
         },
       },
       es: {
@@ -23,8 +25,10 @@ i18n
           navTest: 'Pruébalo',
 
           // APP
+          
 
           // TEST
+          titleTest: 'Testea el programa',
         },
       },
     },
