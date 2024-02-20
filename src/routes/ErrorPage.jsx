@@ -6,7 +6,7 @@ export default function ErrorPage() {
         <>
             <h1>ERROR 404</h1>
             <i>{error.statusText || error.message}</i>
-            <Link to="/">Road to HomePage</Link>
+            <Link to="/">Return to HomePage</Link>
         </>
     )
 }

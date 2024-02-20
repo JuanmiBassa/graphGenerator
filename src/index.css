@@ -5,8 +5,8 @@
 }
 
 :root {
-    --bg: #16191d;
-    --bg-container: #21252e;
+    --bg: #191d22;
+    --bg-container: #1d212b;
 
     --primary-color: #6FF3AA;
 }
@@ -14,4 +14,115 @@
 body {
     background-color: var(--bg);
     width: 100vw;
+}
+
+/* HEADER, ROOT.JSX */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: calc(100vw - 40px);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    backdrop-filter: blur(10px);
+}
+
+#logo {
+    font-size: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0px 5px;
+}
+
+header nav ul li a {
+    margin: 0px 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.neum-container {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: var(--bg);
+    box-shadow: 2px 2px 5px #090a0c,
+        -2px -2px 5px #23282e;
+}
+
+.neum-button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #181b1f, #14171a);
+    box-shadow: 2px 2px 5px #090a0c,
+        -2px -2px 5px #23282e;
+}
+
+.neum-button:hover {
+    background: linear-gradient(145deg, #14171a, #181b1f);
+}
+
+.neum-button:active {
+    background: var(--bg);
+    box-shadow: inset 10px 10px 20px #090a0c,
+        inset -10px -10px 20px #23282e,
+        -2px -2px 5px #090a0c,
+        2px 2px 5px #23282e;
+}
+
+.link-icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-icon {
+    color: #EE5335;
+}
+
+.noti-icon {
+    color: #F5AB41;
+}
+
+.settings-icon {
+    color: #4BB9DA;
+}
+
+.settings-dropdown {
+    position: absolute;
+    display: none;
+    justify-content: end;
+    align-items: center;
+    top: 60px;
+    right: 20px;
+    width: 100px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.settings-dropdown.active {
+    display: flex;
+}
+
+/* MAIN */
+main {
+    margin-top: 60px;
 }
