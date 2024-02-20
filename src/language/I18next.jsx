@@ -13,6 +13,9 @@ i18n
 
           // APP
           greeting: 'Hello, world!',
+
+          // TEST
+          titleTest: 'Test the program',
         },
       },
       es: {
@@ -23,6 +26,9 @@ i18n
 
           // APP
           greeting: '¡Hola, mundo!',
+
+          // TEST
+          titleTest: 'Testea el programa',
         },
       },
     },
