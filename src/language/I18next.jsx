@@ -12,10 +12,8 @@ i18n
           navTest: 'Test it',
 
           // APP
-          greeting: 'Hello, world!',
 
           // TEST
-          titleTest: 'Test the program',
         },
       },
       es: {
@@ -25,10 +23,8 @@ i18n
           navTest: 'Pruébalo',
 
           // APP
-          greeting: '¡Hola, mundo!',
 
           // TEST
-          titleTest: 'Testea el programa',
         },
       },
     },

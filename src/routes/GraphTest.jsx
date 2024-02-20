@@ -6,10 +6,7 @@ export default function GraphTest() {
 
     return (
         <>
-            <h1>{t('titleTest')}</h1>
-            <div id="prueba">
-                
-            </div>
+            
         </>
     )
 }
