@@ -1,4 +1,4 @@
-import { useRouteError } from "react-router-dom"
+import { Link, useRouteError } from "react-router-dom"
 
 export default function ErrorPage() {
     const error = useRouteError();
@@ -6,6 +6,7 @@ export default function ErrorPage() {
         <>
             <h1>ERROR 404</h1>
             <i>{error.statusText || error.message}</i>
+            <Link to="/">Road to HomePage</Link>
         </>
     )
 }
