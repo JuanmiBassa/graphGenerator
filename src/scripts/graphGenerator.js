@@ -9,7 +9,7 @@ export default function generateGraph(dataGraph) {
     if (dataGraph.scaleMarks < 1) dataGraph.scaleMarks = 1;
 
     const maxValue = Math.max.apply(null, dataGraph.values);
-    let numTotalValue = dataGraph.values.reduce((acum, val) => acum + val, 0);
+    // let numTotalValue = dataGraph.values.reduce((acum, val) => acum + val, 0);
 
     let scaledValues = dataGraph.values.map(function (value) {
         return value / maxValue * (canvas.height - 20);

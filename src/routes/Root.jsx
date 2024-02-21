@@ -24,9 +24,6 @@ export default function Root() {
                 <nav>
                     <ul>
                         <li className='nav-list'>
-                            <Link to="/graph-info" className="neum-button">{t('navInfo')}</Link>
-                        </li>
-                        <li className='nav-list'>
                             <Link to="/graph-test">{t('navTest')}</Link>
                         </li>
                         <li className='nav-list'>

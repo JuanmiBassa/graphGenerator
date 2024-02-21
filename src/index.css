@@ -11,6 +11,8 @@
     --bg-dark-container: #15233E;
     --bg-light-container: #384363;
     --border: #727AA1;
+    --inset-input: #00000033;
+    --inset-shadow: #ffffff26 0px 1px 1px, inset #00000080 0 0 0 1px;
   
     --prym-purple-color: #7041FF;
     --prym-lightPurple-color: #A080FB;
@@ -28,6 +30,11 @@
 body {
     background-color: var(--bg-dark);
     width: 100vw;
+}
+
+input {
+    background-color: var(--inset-input);
+    box-shadow: var(--inset-shadow);
 }
 
 /* HEADER, ROOT.JSX */
@@ -71,34 +78,6 @@ header nav ul li a {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-}
-
-.neum-container {
-    padding: 5px 15px;
-    border-radius: 5px;
-    background: var(--bg-dark);
-    box-shadow: 2px 2px 5px #090a0c,
-        -2px -2px 5px #23282e;
-}
-
-.neum-button {
-    padding: 5px 15px;
-    border-radius: 5px;
-    background: linear-gradient(145deg, #181b1f, #14171a);
-    box-shadow: 2px 2px 5px #090a0c,
-        -2px -2px 5px #23282e;
-}
-
-.neum-button:hover {
-    background: linear-gradient(145deg, #14171a, #181b1f);
-}
-
-.neum-button:active {
-    background: var(--bg-dark);
-    box-shadow: inset 10px 10px 20px #090a0c,
-        inset -10px -10px 20px #23282e,
-        -2px -2px 5px #090a0c,
-        2px 2px 5px #23282e;
 }
 
 .link-icon {

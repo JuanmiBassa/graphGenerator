@@ -15,7 +15,7 @@ export default function GraphTest() {
         const dataGraph1 = {
             canvasProps: {
                 id: 'canvas1',
-                maxWidth: 500,
+                maxWidth: 400,
                 height: 200,
             },
             values: [40, 80, 70, 50, 100, 40, 92, 70, 120],
@@ -32,7 +32,7 @@ export default function GraphTest() {
         <>
             <h1>{t('titleTest')}</h1>
 
-            <section id='test-section' className='neum-container'>
+            <section id='test-section'>
                 <div>
                     <label htmlFor="graph_width">Width</label>
                     <input type="text" name='graph_width' id='graph_width' className='test-input' />
@@ -56,10 +56,12 @@ export default function GraphTest() {
 
             </section>
 
-            <section>
+            <section id='graph-section'>
+
                 <div className="graph_container">
                     <canvas id="canvas1"></canvas>
                 </div>
+
             </section>
         </>
     )
