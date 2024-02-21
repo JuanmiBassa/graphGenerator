@@ -78,7 +78,7 @@ function drawCanvasLinesAndText(canvas, ctx, dataGraph, maxValue) {
         let y = i * spaceBetweenLines + 15;
 
         ctx.font = '15px Arial';
-        ctx.fillStyle = '#A0A7B1';
+        ctx.fillStyle = '#cecece';
         ctx.textAlign = 'start';
         let num = Math.abs(StatNumbers * i - (maxValue));
         ctx.fillText(abbreviateNumber(num, dataGraph.limitNums), 0, y - 3);

@@ -20,9 +20,9 @@ export default function GraphTest() {
             },
             values: [40, 80, 70, 50, 100, 40, 92, 70, 120],
             color: '#FB5350',
-            scaleMarks: 5,
+            scaleMarks: 8,
             limitNums: 10,
-            circles: false,
+            circles: true,
         }
 
         generateGraph(dataGraph1);
@@ -54,6 +54,10 @@ export default function GraphTest() {
                 </div>
                 <p>Selected Value: {selectedValue}</p>
 
+                <div>
+                    <label htmlFor="graph-scaleMarks">Scale marks</label>
+                    <input type="text" name='graph-scaleMarks' id='graph-scaleMarks' className='test-input' />
+                </div>
             </section>
 
             <section id='graph-section'>
