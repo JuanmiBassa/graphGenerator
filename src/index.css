@@ -21,13 +21,12 @@
     --light-white: #E8E9EB;
     --secondary-text: #cecece;
   
-    --response-ok: #25f174;
-    --response-bad: #fc513a;
-    --response-info: #33c0f8;
+    --prym-green: #25f174;
+    --prym-red: #fc513a;
   }
 
 body {
-    background-color: var(--bg);
+    background-color: var(--bg-dark);
     width: 100vw;
 }
 
@@ -51,7 +50,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--primary-color);
+    color: var(--prym-blue-color);
 }
 
 header nav ul {
@@ -77,7 +76,7 @@ header nav ul li a {
 .neum-container {
     padding: 5px 15px;
     border-radius: 5px;
-    background: var(--bg);
+    background: var(--bg-dark);
     box-shadow: 2px 2px 5px #090a0c,
         -2px -2px 5px #23282e;
 }
@@ -95,7 +94,7 @@ header nav ul li a {
 }
 
 .neum-button:active {
-    background: var(--bg);
+    background: var(--bg-dark);
     box-shadow: inset 10px 10px 20px #090a0c,
         inset -10px -10px 20px #23282e,
         -2px -2px 5px #090a0c,
