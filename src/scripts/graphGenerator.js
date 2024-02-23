@@ -1,8 +1,11 @@
 export default function generateGraph(dataGraph) {
     const canvas = document.getElementById(`${dataGraph.canvasProps.id}`);
     const ctx = canvas.getContext('2d');
+    const canvasContainer = document.getElementById(`${dataGraph.canvasProps.id}-container`)
 
-    canvas.width = dataGraph.canvasProps.maxWidth;
+    const canvasSize = dataGraph.canvasProps.maxWidth;
+    canvasContainer.style.width = canvasSize - (canvasSize / 10) + "px";
+    canvas.width = canvasSize;
     canvas.height = dataGraph.canvasProps.height;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 

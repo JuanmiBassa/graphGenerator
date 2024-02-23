@@ -8,7 +8,7 @@ i18n
       en: {
         translation: {
           // ROOT
-          navTest: 'Test it',
+          navTest: 'Try Demo',
 
           // APP
           
@@ -20,7 +20,7 @@ i18n
       es: {
         translation: {
           // ROOT
-          navTest: 'Pruébalo',
+          navTest: 'Probar Demo',
 
           // APP
           

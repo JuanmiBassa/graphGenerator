@@ -7,7 +7,7 @@ export default function GraphTest() {
     const { t } = useTranslation();
     const [selectedValue, setSelectedValue] = useState('');
 
-    const handleInputChange = (event) => {
+    const changeHraph = (event) => {
         setSelectedValue(event.target.value);
     };
 
@@ -15,14 +15,14 @@ export default function GraphTest() {
         const dataGraph1 = {
             canvasProps: {
                 id: 'canvas1',
-                maxWidth: 400,
+                maxWidth: 700,
                 height: 200,
             },
             values: [40, 80, 70, 50, 100, 40, 92, 70, 120],
             color: '#FB5350',
-            scaleMarks: 8,
-            limitNums: 10,
-            circles: true,
+            scaleMarks: 6,
+            limitNums: 2,
+            circles: false,
         }
 
         generateGraph(dataGraph1);
@@ -46,11 +46,11 @@ export default function GraphTest() {
                 <div className="radio-input">
                     <label htmlFor=""></label>
                     <input name="style-radio" type="radio" className="graph-style"
-                        value="1" onChange={handleInputChange} />
+                        value="1" onChange={changeHraph} />
                     <input name="style-radio" type="radio" className="graph-style"
-                        value="2" onChange={handleInputChange} />
+                        value="2" onChange={changeHraph} />
                     <input name="style-radio" type="radio" className="graph-style"
-                        value="3" onChange={handleInputChange} />
+                        value="3" onChange={changeHraph} />
                 </div>
                 <p>Selected Value: {selectedValue}</p>
 
@@ -62,7 +62,7 @@ export default function GraphTest() {
 
             <section id='graph-section'>
 
-                <div className="graph_container">
+                <div id='canvas1-container' className="graph-container">
                     <canvas id="canvas1"></canvas>
                 </div>
 

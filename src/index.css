@@ -29,7 +29,6 @@
 
 body {
     background-color: var(--bg-dark);
-    width: 100vw;
 }
 
 input {

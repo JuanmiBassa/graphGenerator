@@ -74,7 +74,7 @@
     flex-wrap: wrap;
 }
 
-.graph_container {
+.graph-container {
     padding: 20px;
     border: 1px var(--border) solid;
     background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
