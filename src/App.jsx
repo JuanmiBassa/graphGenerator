@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import './styles/app.css'
 import { Link } from "react-router-dom"
+import { MdPersonAddAlt1 } from "react-icons/md"
 
 
 function App() {
@@ -25,6 +26,47 @@ function App() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section id='app-section2'>
+        <div className='titulo'>
+          <h2>We Believe in Graphics</h2>
+        </div>
+
+        <div className='card-container'>
+          <div className='card'>
+            <div className='fondo-icon' id='burbuja3'>
+              <MdPersonAddAlt1 className='icon-card' />
+            </div>
+
+            <h3>Client </h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Non natus accusamus officia porro</p>
+          </div>
+
+          <div>
+            <div className='card'>
+              <h3>Advantatges</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Non natus accusamus officia porro</p>
+
+            </div>
+
+            <div className='card'>
+              <h3>Graphics</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Non natus accusamus officia porro</p>
+
+            </div>
+          </div>
+
+          <div className='card'>
+            <h3>Percentatges</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Non natus accusamus officia porro</p>
+          </div>
+        </div>
+
       </section>
 
     </>

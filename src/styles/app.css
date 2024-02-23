@@ -1,14 +1,14 @@
 
 #app-section1 {
     width: 100%;
-    min-height: 100%;
+    min-height: calc(100vh - 60px);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 #app-section1>div {
-    width: 40%;
+    width: 45%;
     text-align: justify;
 }
 
@@ -53,7 +53,7 @@ h2 {
     justify-content: center;
     align-items: center;
     height: 500px;
-    width: 500px;
+    width: 100%;
     border-radius: 65% 35% 73% 27% / 36% 34% 66% 64%;
     background: linear-gradient(45deg, var(--prym-blue-color) 0%, var(--prym-cyan-color) 100%);
     animation: animate 10s infinite ease-in-out;
@@ -98,4 +98,49 @@ h2 {
         border-radius: 27% 73% 75% 25% / 29% 26% 74% 71% ;
     }
     
+}
+
+#app-section2{
+    text-align: center;
+}
+
+.titulo{
+    font-size: 20px;
+}
+
+.card-container{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    border: 1px var(--border) solid;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+#burbuja3{
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 33% 67% 81% 19% / 55% 58% 42% 45% ;
+    background: linear-gradient(45deg, var(--prym-purple-color) 0%, var(--prym-lightPurple-color) 100%);
+}
+
+.fondo-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-card{
+    font-size: 50px;
+    ma
 }
