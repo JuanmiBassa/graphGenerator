@@ -27,6 +27,10 @@
     border-bottom: 1px var(--prym-red) solid;
 }
 
+#graph-color {
+    height: 36px;
+}
+
 .graph-style {
     appearance: none;
     margin: 5px;
@@ -62,12 +66,9 @@
         transparent 60%);
 }
 
-.graph-style:checked~.graph-style,
-.graph-style:checked~.graph-style:active {
-    background-position: 0 -20px;
-}
-
 #graph-section {
+    width: 90%;
+    margin: 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,14 +76,16 @@
 }
 
 .graph-container {
-    padding: 20px;
+    padding: 20px 0px;
     border: 1px var(--border) solid;
     background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
     border-radius: 10px;
-    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 canvas {
-    width: 100%;
+    width: 90%;
     height: 100%;
 }
