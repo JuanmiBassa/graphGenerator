@@ -1,7 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import './styles/app.css'
 import { Link } from "react-router-dom"
-import { MdPersonAddAlt1 } from "react-icons/md"
+import { FaUsers } from "react-icons/fa"
+import { IoBarChartSharp } from "react-icons/io5"
+import { IoIosColorPalette } from "react-icons/io"
+import { GiResize } from "react-icons/gi"
+import { ImListNumbered } from "react-icons/im"
 
 
 function App() {
@@ -11,8 +15,8 @@ function App() {
     <>
       <section id='app-section1'>
         <div>
-          <h1>GENERADOR DE GRAFICAS</h1>
-          <h2>Crea tu propia grafica</h2>
+          <h1>GRAPHIC GENERATOR</h1>
+          <h2>Create your graphic</h2>
           <p className='text-section1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, neque labore rem soluta magni esse voluptate perspiciatis voluptas impedit adipisci quas minus sed molestias, facere saepe illo excepturi vel dignissimos.</p>
           <div className='buttons-section1'>
             <Link to="#app-section-howToUse">How To Use?</Link>
@@ -36,37 +40,95 @@ function App() {
         <div className='card-container'>
           <div className='card'>
             <div className='fondo-icon' id='burbuja3'>
-              <MdPersonAddAlt1 className='icon-card' />
+              <FaUsers className='icon-card' />
             </div>
 
-            <h3>Client </h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Non natus accusamus officia porro</p>
+            <div className='text-section2'>
+              <h3>Client </h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Non natus accusamus officia porro</p>
+            </div>
+
           </div>
 
           <div>
             <div className='card'>
-              <h3>Advantatges</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Non natus accusamus officia porro</p>
+              <div className='fondo-icon' id='burbuja4'>
+                <FaUsers className='icon-card' />
+              </div>
 
+              <div className='text-section2'>
+                <h3>Advantatges</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Non natus accusamus officia porro</p>
+              </div>
             </div>
 
             <div className='card'>
-              <h3>Graphics</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Non natus accusamus officia porro</p>
+              <div className='fondo-icon' id='burbuja5'>
+                <IoBarChartSharp className='icon-card' />
+              </div>
 
+              <div className='text-section2'>
+                <h3>Charts</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Non natus accusamus officia porro</p>
+              </div>
             </div>
           </div>
 
           <div className='card'>
-            <h3>Percentatges</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Non natus accusamus officia porro</p>
+            <div className='fondo-icon' id='burbuja6'>
+              <FaUsers className='icon-card' />
+            </div>
+
+            <div className='text-section2'>
+              <h3>Percentatges</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Non natus accusamus officia porro</p>
+            </div>
           </div>
         </div>
+      </section>
 
+      <section id='app-section3'>
+        <div className='titulo'>
+          <h3>CHARACTERISTICS</h3>
+        </div>
+
+        <div className='characteristics-container'>
+          <div className='characteristics'>
+            <div>
+              <GiResize />
+            </div>
+
+            <div>
+              <h4>CHOOSE THE SIZE</h4>
+            </div>
+
+          </div>
+
+          <div className='characteristics'>
+            <div>
+              <IoIosColorPalette />
+            </div>
+
+            <div>
+              <h4>CUSTOMIZE THE COLOR</h4>
+            </div>
+
+          </div>
+
+          <div className='characteristics'>
+            <div>
+              <ImListNumbered/>
+            </div>
+
+            <div>
+              <h4>SELECT SCALE MARKS</h4>
+            </div>
+          </div>
+        </div>
       </section>
 
     </>

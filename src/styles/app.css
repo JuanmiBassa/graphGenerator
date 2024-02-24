@@ -19,6 +19,10 @@
 
 h1 {
     color: var(--light-white);
+    margin-bottom: 40px;
+    font-size: 45px;
+    font-weight: bolder;
+    font-style: italic;
 }
 
 h2 {
@@ -100,15 +104,18 @@ h2 {
     
 }
 
-#app-section2{
+#app-section2 {
     text-align: center;
 }
 
-.titulo{
-    font-size: 20px;
+.titulo {
+    font-size: 30px;
+    font-weight: bolder;
+    font-style: italic;
+    color: var(--light-white);
 }
 
-.card-container{
+.card-container {
     margin-top: 15px;
     display: flex;
     justify-content: center;
@@ -124,23 +131,59 @@ h2 {
     margin: 10px;
     color: white;
     text-align: center;
+    padding: 5px;
+    box-shadow: #6dd5e793 0px 2px 4px 0px, #6dd5e793 0px 2px 16px 0px;
 }
 
-#burbuja3{
+#burbuja3 {
     margin: 0 auto;
     width: 80px;
     height: 80px;
     border-radius: 33% 67% 81% 19% / 55% 58% 42% 45% ;
-    background: linear-gradient(45deg, var(--prym-purple-color) 0%, var(--prym-lightPurple-color) 100%);
+    background: linear-gradient(45deg, #ff0000 0%, #ff9966 100%);
 }
 
-.fondo-icon{
+#burbuja4 {
+    border-radius: 50% 50% 50% 50% / 29% 80% 20% 71% ;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #003300 0%, #00ff00 100%);
+}
+
+#burbuja5 {
+    border-radius: 44% 56% 45% 55% / 31% 33% 67% 69%  ;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #ff3399 0%, #9900ff 100%);
+}
+
+#burbuja6 {
+    border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%  ;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #00ffff 0%, #0000ff 100%);
+}
+
+.fondo-icon {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.icon-card{
+.icon-card {
     font-size: 50px;
-    ma
+}
+
+.text-section2 {
+    margin-top: 15px;
+}
+
+.characteristics {
+    border: 2px solid red;
+    margin: 15px 0px;
+    padding: 10px;
+    display: flex;
 }
