@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <section id='app-section1'>
-        <div>
+        <div className='container'>
           <h1>GRAPHIC GENERATOR</h1>
           <h2>Create your graphic</h2>
           <p className='text-section1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, neque labore rem soluta magni esse voluptate perspiciatis voluptas impedit adipisci quas minus sed molestias, facere saepe illo excepturi vel dignissimos.</p>
@@ -98,34 +98,36 @@ function App() {
 
         <div className='characteristics-container'>
           <div className='characteristics'>
-            <div>
-              <GiResize />
+            <div className='icon-char'>
+              <GiResize id='icon-char1'/>
             </div>
 
-            <div>
+            <div className='title-char'>
               <h4>CHOOSE THE SIZE</h4>
+              <p>Customize the size of your graphics to fit your presentation needs.</p>
             </div>
-
           </div>
 
           <div className='characteristics'>
-            <div>
-              <IoIosColorPalette />
+            <div className='icon-char'>
+              <IoIosColorPalette id='icon-char2' />
             </div>
 
-            <div>
+            <div className='title-char'>
               <h4>CUSTOMIZE THE COLOR</h4>
+              <p>Bring your charts to life with custom colors that highlight your data effectively.</p>
             </div>
 
           </div>
 
           <div className='characteristics'>
-            <div>
-              <ImListNumbered/>
+            <div className='icon-char'>
+              <ImListNumbered id='icon-char3'/>
             </div>
 
-            <div>
+            <div className='title-char'>
               <h4>SELECT SCALE MARKS</h4>
+              <p>Adjust the scales of your graphs for a clear and accurate presentation of your data.</p>
             </div>
           </div>
         </div>
