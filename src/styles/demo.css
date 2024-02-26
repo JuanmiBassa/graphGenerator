@@ -1,20 +1,23 @@
-#test-section {
-    width: 90%;
+#demo-section {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
-    border-radius: 10px;
     border: 1px var(--border) solid;
+    border-radius: 10px;
+    width: 90%;
 }
 
-#test-section div {
+#demo-section>div {
     display: flex;
     flex-direction: column;
     margin: 20px;
+    min-width: 100px;
 }
 
 .test-input {
     border: none;
+    width: 100%;
     padding: 10px 5px;
     border-radius: 5px;
     color: white;
@@ -31,39 +34,36 @@
     height: 36px;
 }
 
-.graph-style {
+.radio-style {
     appearance: none;
     margin: 5px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     cursor: pointer;
-    background-image: radial-gradient(
-        white 0%, 
-        var(--prym-cyan-color) 15%, 
-        var(--prym-blue-color) 30%, 
-        transparent 60%);
     background-repeat: no-repeat;
-    transition: background-position 0.3s;
+    background-position: 0px 20px;
+    transition: background-position 0.2s;
     outline: none;
 }
 
-.graph-style:active {
+.radio-style:active {
     transform: scale(1.2);
 }
 
-.graph-style,
-.graph-style:active {
-    background-position: 0 20px;
-}
-
-.graph-style:checked {
-    background-position: 0 0;
+.radio-style:checked {
+    background-position: 0px 0px;
     background-image: radial-gradient(
         white 0%, 
         var(--prym-cyan-color) 15%, 
         var(--prym-blue-color) 30%, 
         transparent 60%);
+}
+
+.radio-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #graph-section {

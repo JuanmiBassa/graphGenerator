@@ -122,3 +122,7 @@ main {
     align-items: center;
     flex-direction: column;
 }
+
+h1 {
+    margin: 30px 0px;
+}

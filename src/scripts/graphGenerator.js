@@ -9,7 +9,6 @@ export default function generateGraph(dataGraph) {
     if (dataGraph.scaleMarks < 1) dataGraph.scaleMarks = 1;
 
     const maxValue = Math.max.apply(null, dataGraph.values);
-    // let numTotalValue = dataGraph.values.reduce((acum, val) => acum + val, 0);
 
     let scaledValues = dataGraph.values.map(function (value) {
         return value / maxValue * (canvas.height - 20);
@@ -81,7 +80,7 @@ function drawCanvasLinesAndText(canvas, ctx, dataGraph, maxValue) {
         ctx.fillStyle = '#cecece';
         ctx.textAlign = 'start';
         let num = Math.abs(StatNumbers * i - (maxValue));
-        ctx.fillText(abbreviateNumber(num, dataGraph.limitNums), 0, y - 3);
+        ctx.fillText(abbreviateNumber(num), 0, y - 3);
 
         ctx.beginPath();
         ctx.strokeStyle = '#181C27';
@@ -91,20 +90,20 @@ function drawCanvasLinesAndText(canvas, ctx, dataGraph, maxValue) {
     }
 }
 
-function abbreviateNumber(num, maxNums) {
-    if (num < 0) return num.toFixed(maxNums);
+function abbreviateNumber(num) {
+    if (num < 0) return num;
     else if (num < 100) return Math.trunc(num);
     else if (num >= 100 && num < 1000) {
         return Math.trunc(num);
     } else if (num >= 1000 && num < 1000000) {
         num /= 1000;
-        return `${num.toFixed(maxNums)}K`
+        return `${num.toFixed(2)}K`
     } else if (num >= 1000000 && num < 1000000000) {
         num /= 1000000;
-        return `${num.toFixed(maxNums)}M`
+        return `${num.toFixed(2)}M`
     } else if (num >= 1000000000) {
         num /= 1000000000;
-        return `${num.toFixed(maxNums)}B`
+        return `${num.toFixed(2)}B`
     }
 }
 

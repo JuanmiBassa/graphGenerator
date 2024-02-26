@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import Root from './routes/Root.jsx'
 import ErrorPage from './routes/ErrorPage.jsx'
-import GraphTest from './routes/GraphTest.jsx';
+import Demo from './routes/Demo.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,8 +21,8 @@ const router = createBrowserRouter([
         element: <App />
       },
       {
-        path: "/graph-test",
-        element: <GraphTest />
+        path: "/demo",
+        element: <Demo />
       }
     ]
   }
