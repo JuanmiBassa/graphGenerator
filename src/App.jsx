@@ -36,47 +36,50 @@ function App() {
         </div>
 
         <div className='card-container'>
-          <div className='hexagon'>
-            <FaScrewdriverWrench className='icon-card' />
-          </div>
-
           <div className='card'>
+            <div className='hexagon' id='hex1'>
+              <FaScrewdriverWrench className='icon-card' />
+            </div>
             <div className='text-section2'>
               <h3>Easy To Use</h3>
               <p>This system has been designed with an intuitive interface for ease of use.</p>
             </div>
           </div>
 
-          <div className='hexagon'>
-            <IoColorFillSharp className='icon-card' />
-          </div>
+
+
           <div className='card'>
+            <div className='hexagon' id='hex2'>
+              <IoColorFillSharp className='icon-card' />
+            </div>
             <div className='text-section2'>
               <h3>Customizable</h3>
-              <p>This graphics system allows for complete customization of colors and styles.</p>
+              <p>This graphics system allows for complete customization of colors.</p>
             </div>
           </div>
 
-          <div className='hexagon'>
-            <FaSackDollar className='icon-card' />
-          </div>
           <div className='card'>
+            <div className='hexagon' id='hex3'>
+              <FaSackDollar className='icon-card' />
+            </div>
             <div className='text-section2'>
               <h3>Free</h3>
               <p>This service is available free of charge to all users.</p>
             </div>
           </div>
 
-          <div className='hexagon'>
-            <FaUnlink className='icon-card' />
-          </div>
 
           <div className='card'>
+            <div className='hexagon' id='hex4'>
+              <FaUnlink className='icon-card' />
+            </div>
             <div className='text-section2'>
               <h3>No Dependencies</h3>
               <p>This page does not require external dependencies for its correct functioning.</p>
             </div>
           </div>
+
+
         </div>
       </section>
 

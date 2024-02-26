@@ -189,40 +189,55 @@ h2 {
 }
 
 .card {
-    background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
-    height: 150px;
-    width: 200px;
-    border-radius: 10px;
-    border: 1px var(--border) solid;
-    margin: 10px;
-    color: white;
-    text-align: center;
-    padding: 5px;
-    box-shadow: #6dd5e793 0px 2px 4px 0px, #6dd5e793 0px 2px 16px 0px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .hexagon {
-    position: relative;
-    top: -80px;
-    left: 155px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80px; 
     height: 80px; 
-    background-color: #ccc; /* color de fondo del hexágono */
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     border-radius: 15px; /* agrega bordes redondos */
-    z-index: 1; /* Coloca el hexágono encima del contenido */
+    z-index: 1;
+}
+
+.text-section2 {
+    position: relative;
+    top: -50px;
+    background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
+    margin: 10px;
+    width: 220px;
+    height: 100px;
+    border: 1px #0077ff solid;
+    padding: 50px 10px 0px;
+    text-align: center;
+    color: white;
+}
+
+#hex1 {
+    background: linear-gradient(45deg, #1c14a3 12%, #0f52cc 43%, #00f9ff 75%);
+}
+
+#hex2 {
+    background: linear-gradient(45deg, #f00202 12%, #ff470a 48%, #ffaf00 78%);
+}
+
+#hex3 {
+    background: linear-gradient(45deg, #f00233 12%, #ff0a51 52%, #ff00a4 78%);
+}
+
+#hex4 {
+    background: linear-gradient(45deg, #7102f0 8%, #e40aff 64%, #ff00f9 92%);
 }
 
 .icon-card {
     font-size: 35px;
-}
-
-.text-section2 {
-    margin-top: 55px;
+    color: white;
 }
 
 
