@@ -17,7 +17,7 @@ function App() {
           <h2>Create your graphic</h2>
           <p className='text-section1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, neque labore rem soluta magni esse voluptate perspiciatis voluptas impedit adipisci quas minus sed molestias, facere saepe illo excepturi vel dignissimos.</p>
           <div className='buttons-section1'>
-            <Link to="#app-section3">How To Use?</Link>
+            <a href="#app-section3">How To Use?</a>
             <Link to="/graph-test">Prove it</Link>
           </div>
         </div>
@@ -36,47 +36,42 @@ function App() {
         </div>
 
         <div className='card-container'>
-          <div className='card'>
-            <div className='fondo-icon' id='burbuja3'>
-              <FaScrewdriverWrench className='icon-card' />
-            </div>
+          <div className='hexagon'>
+            <FaScrewdriverWrench className='icon-card' />
+          </div>
 
+          <div className='card'>
             <div className='text-section2'>
               <h3>Easy To Use</h3>
               <p>This system has been designed with an intuitive interface for ease of use.</p>
             </div>
-
           </div>
 
-          <div>
-            <div className='card'>
-              <div className='fondo-icon' id='burbuja4'>
-                <IoColorFillSharp className='icon-card' />
-              </div>
-
-              <div className='text-section2'>
-                <h3>Customizable</h3>
-                <p>This graphics system allows for complete customization of colors and styles.</p>
-              </div>
+          <div className='hexagon'>
+            <IoColorFillSharp className='icon-card' />
+          </div>
+          <div className='card'>
+            <div className='text-section2'>
+              <h3>Customizable</h3>
+              <p>This graphics system allows for complete customization of colors and styles.</p>
             </div>
+          </div>
 
-            <div className='card'>
-              <div className='fondo-icon' id='burbuja5'>
-                <FaSackDollar className='icon-card' />
-              </div>
-
-              <div className='text-section2'>
-                <h3>Free</h3>
-                <p>This service is available free of charge to all users.</p>
-              </div>
+          <div className='hexagon'>
+            <FaSackDollar className='icon-card' />
+          </div>
+          <div className='card'>
+            <div className='text-section2'>
+              <h3>Free</h3>
+              <p>This service is available free of charge to all users.</p>
             </div>
+          </div>
+
+          <div className='hexagon'>
+            <FaUnlink className='icon-card' />
           </div>
 
           <div className='card'>
-            <div className='fondo-icon' id='burbuja6'>
-              <FaUnlink className='icon-card' />
-            </div>
-
             <div className='text-section2'>
               <h3>No Dependencies</h3>
               <p>This page does not require external dependencies for its correct functioning.</p>

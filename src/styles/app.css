@@ -59,6 +59,7 @@ h2 {
     padding: 5px 10px;
     text-decoration: none;
     border-radius: 5px;
+    margin: 5px;
 }
 
 .buttons-section1 a:first-child {
@@ -87,10 +88,28 @@ h2 {
 }
 
 .buttons-section1 a:last-child {
-    color: white;
-    margin-left: 10px;
-    border: 1px solid transparent;
-    background: linear-gradient(135deg, var(--prym-purple-color) 0%, var(--prym-lightPurple-color) 100%);
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #0e0e1a;
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, #00000000, #00000066);
+    color: var(--secondary-text);
+}
+
+.buttons-section1 a:last-child:active {
+    scale: 0.92;
+}
+
+.buttons-section1 a:last-child:hover {
+    background: #021d4e;
+    background: linear-gradient(270deg, #021d4eae 0%, #1fd7e8df 60%);
+    color: #090920;
 }
 
 #burbuja1 {
@@ -163,7 +182,7 @@ h2 {
 }
 
 .card-container {
-    margin-top: 15px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,8 +190,8 @@ h2 {
 
 .card {
     background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
-    height: 230px;
-    width: 250px;
+    height: 150px;
+    width: 200px;
     border-radius: 10px;
     border: 1px var(--border) solid;
     margin: 10px;
@@ -180,45 +199,22 @@ h2 {
     text-align: center;
     padding: 5px;
     box-shadow: #6dd5e793 0px 2px 4px 0px, #6dd5e793 0px 2px 16px 0px;
+    position: relative;
 }
 
-#burbuja3 {
-    margin: 5px auto;
-    width: 80px;
-    height: 80px;
-    border-radius: 33% 67% 81% 19% / 55% 58% 42% 45%;
-    background: linear-gradient(45deg, #ff0000 0%, #ff9966 100%);
-}
-
-#burbuja4 {
-    border-radius: 56% 44% 70% 30% / 30% 69% 31% 70%;
-    margin: 5px auto;
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(45deg, #003300 0%, #00ff00 100%);
-}
-
-#burbuja5 {
-    border-radius: 44% 56% 45% 55% / 31% 33% 67% 69%;
-    margin: 5px auto;
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(45deg, #ff3399 0%, #9900ff 100%);
-}
-
-#burbuja6 {
-    border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
-    margin: 5px auto;
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(45deg, #00ffff 0%, #0000ff 100%);
-}
-
-.fondo-icon {
+.hexagon {
+    position: relative;
+    top: -80px;
+    left: 155px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    width: 80px; 
+    height: 80px; 
+    background-color: #ccc; /* color de fondo del hexágono */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    border-radius: 15px; /* agrega bordes redondos */
+    z-index: 1; /* Coloca el hexágono encima del contenido */
 }
 
 .icon-card {
@@ -226,7 +222,7 @@ h2 {
 }
 
 .text-section2 {
-    margin-top: 15px;
+    margin-top: 55px;
 }
 
 
