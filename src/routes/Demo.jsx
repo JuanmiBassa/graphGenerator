@@ -7,7 +7,6 @@ import CodeMirrorRO from '../templates/CodeMirror.jsx'
 
 export default function Demo() {
     const { t } = useTranslation();
-
     const [graphObject, setGraphObject] = useState({
         canvasProps: {
             id: 'canvas',
@@ -19,6 +18,7 @@ export default function Demo() {
         scaleMarks: 6,
         circles: false,
     });
+    const [selectedValue, setSelectedValue] = useState();
 
     const changeGraphWidth = (event) => {
         const { value } = event.target;
@@ -40,6 +40,15 @@ export default function Demo() {
                 height: parseInt(value)
             }
         }));
+    };
+
+    const removeSelectedValue = () => {
+        const updatedValues = graphObject.values.filter(value => value !== valueToRemove);
+    
+    setGraphObject({
+      ...graphObject,
+      values: updatedValues,
+    });
     };
 
     const changeGraphColor = (event) => {
@@ -85,6 +94,19 @@ export default function Demo() {
                     <label htmlFor="graph_height">Height</label>
                     <input type="number" name='graph_height' id='graph_height' className='test-input'
                         onChange={changeGraphHeigh} value={graphObject.canvasProps.height} />
+                </div>
+
+                <div>
+                    <input type="number" placeholder='new value' className='test-input' id='newvalue' />
+                    <button>Add new value</button>
+
+                    <select name="" id="" value={selectedValue} 
+                        onChange={(event) => setSelectedValue(event.target.value)}>
+                        {graphObject.values.map((value, index) => (
+                            <option key={index} value={value}>{value}</option>
+                        ))}
+                    </select>
+                    <button onClick={() => removeSelectedValue(selectedValue)}>Remove value selected</button>
                 </div>
 
                 <div>
