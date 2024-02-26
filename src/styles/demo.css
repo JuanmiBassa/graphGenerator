@@ -1,18 +1,23 @@
 #demo-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
     border: 1px var(--border) solid;
     border-radius: 10px;
     width: 90%;
+    margin: 20px 0px;
 }
 
-#demo-section>div {
+.demo-container {
     display: flex;
     flex-direction: column;
     margin: 20px;
     min-width: 100px;
+}
+
+#demo-section label {
+    color: var(--secondary-text);
 }
 
 .test-input {
@@ -28,6 +33,38 @@
 .test-input:focus {
     outline: none;
     border-bottom: 1px var(--prym-red) solid;
+}
+
+.updateValues-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    min-width: 100px;
+}
+
+#newvalue {
+    
+}
+
+.updateValues-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.updateValues-button svg{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 20px;
+    background-color: var(--light-white);
+    border-bottom: 1px var(--prym-cyan-color) solid;
 }
 
 #graph-color {
@@ -68,7 +105,6 @@
 
 #graph-section {
     width: 90%;
-    margin: 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,4 +124,19 @@
 canvas {
     width: 90%;
     height: 100%;
+}
+
+#code-mirror-section {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#code-mirror-js {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px var(--border) solid;
 }

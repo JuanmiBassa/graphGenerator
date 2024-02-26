@@ -3,8 +3,7 @@ import CodeMirror from "@uiw/react-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
 import { vscodeDark, vscodeDarkInit } from '@uiw/codemirror-theme-vscode';
 
-
-const CodeMirrorRO = ({ code }) => {
+export default function CodeMirrorJS ({ code }) {
     const objectToString = (obj, indent = 0) => {
         let result = '';
         const keys = Object.keys(obj);
@@ -39,9 +38,7 @@ const CodeMirrorRO = ({ code }) => {
         <>
             <CodeMirror
                 value={codeString}
-                width='300px'
-                height="320px"
-                minHeight='320px'
+                width='100%'
                 theme={vscodeDarkInit()}
                 extensions={[javascript({})]}
                 readOnly={true}
@@ -49,5 +46,3 @@ const CodeMirrorRO = ({ code }) => {
         </>
     );
 };
-
-export default CodeMirrorRO;

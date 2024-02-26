@@ -34,9 +34,8 @@ export default function Root() {
                         </li>
                         <li className='nav-list'>
                             <IoMdSettings className="settings-icon link-icon" onClick={toggleSettings} />
-                            <div className={`neum-container settings-dropdown ${isSettingsOpen ? 'active' : ''}`}>
+                            <div className={`settings-dropdown ${isSettingsOpen ? 'active' : ''}`}>
                                 <LanguageSelector i18n={i18n} />
-                                
                             </div>
                         </li>
                     </ul>

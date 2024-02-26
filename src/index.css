@@ -21,7 +21,7 @@
     --prym-cyan-color: #0ED5AF;
   
     --light-white: #E8E9EB;
-    --secondary-text: #cecece;
+    --secondary-text: #bfcacf;
   
     --prym-green: #25f174;
     --prym-red: #fc513a;
@@ -103,11 +103,18 @@ header nav ul li a {
     display: none;
     justify-content: end;
     align-items: center;
+    flex-direction: column;
     top: 60px;
-    right: 20px;
+    right: 30px;
     width: 100px;
     padding: 20px;
     border-radius: 10px;
+    background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
+    border: 1px var(--border) solid;
+}
+
+#languages {
+    width: 100%;
 }
 
 .settings-dropdown.active {
@@ -125,4 +132,5 @@ main {
 
 h1 {
     margin: 30px 0px;
+    text-align: center;
 }

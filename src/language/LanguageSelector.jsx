@@ -8,10 +8,13 @@ function LanguageSelector() {
   };
 
   return (
-    <select name="" id="" onChange={(event) => changeLanguage(event.target.value)}>
-      <option value="en">EN</option>
-      <option value="es">ES</option>
-    </select>
+    <>
+    <label htmlFor="languages">Select a language</label>
+      <select name="languages" id="languages" onChange={(event) => changeLanguage(event.target.value)}>
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+      </select>
+    </>
   );
 }
 
