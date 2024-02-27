@@ -25,6 +25,7 @@
     --secondary-text: #bfcacf;
   
     --default-button: #47CF73;
+    --default-button-hover: #329b53;
     --prym-red: #fc513a;
   }
 
@@ -42,12 +43,19 @@ input {
     justify-content: center;
     align-items: center;
     background: var(--default-button);
-    padding: 5px;
     border-radius: 5px;
     width: 100px;
+    height: 35px;
     text-decoration: none;
     color: var(--bg-dark);
     font-weight: bolder;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.default-button:hover {
+    background: var(--default-button-hover);
+    color: white;
 }
 
 /* HEADER, ROOT.JSX */
