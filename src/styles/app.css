@@ -67,6 +67,10 @@ h2 {
     margin: 5px;
 }
 
+#frontPage-container>img {
+    width: 100%;
+}
+
 
 .frontPage {
     display: flex;
