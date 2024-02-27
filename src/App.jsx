@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 function App() {
   const [activeSteps, setActiveSteps] = useState(1);
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
 
   return (
     <>
@@ -78,20 +78,26 @@ function App() {
         </div>
       </section>
 
-      <section>
+
+      <section id='app-section3'>
+        <h1>How To Use</h1>
+        <h2>Learn the code only in four steps</h2>
         <div>
-          <button onClick={() => setActiveSteps(1)}>1.Download JS</button>
-          <button onClick={() => setActiveSteps(2)}>2.Import Your Project</button>
-          <button onClick={() => setActiveSteps(3)}>3.Customize the default object</button>
-          <button onClick={() => setActiveSteps(4)}>4.Call global function</button>
+          <div>
+            <button className='steps' onClick={() => setActiveSteps(1)}>1.Download JS</button>
+            <button className='steps' onClick={() => setActiveSteps(2)}>2.Import Your Project</button>
+            <button className='steps' onClick={() => setActiveSteps(3)}>3.Customize the default object</button>
+            <button className='steps' onClick={() => setActiveSteps(4)}>4.Call global function</button>
+          </div>
+
+          <div className='steps'>
+            {activeSteps == 1 && <div></div>}
+            {activeSteps == 2 && <div></div>}
+            {activeSteps == 3 && <div></div>}
+            {activeSteps == 4 && <div></div>}
+          </div>
         </div>
 
-        <div>
-          {activeSteps == 1 && <div></div>}
-          {activeSteps == 2 && <div></div>}
-          {activeSteps == 3 && <div></div>}
-          {activeSteps == 4 && <div></div>}
-        </div>
 
       </section>
 

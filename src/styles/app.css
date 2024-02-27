@@ -146,7 +146,7 @@ h2 {
     width: 80px; 
     height: 80px; 
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    border-radius: 15px; /* agrega bordes redondos */
+    border-radius: 15px;
     z-index: 1;
 }
 
@@ -157,10 +157,10 @@ h2 {
     margin: 10px;
     width: 220px;
     height: 100px;
-    border: 1px #0077ff solid;
     padding: 50px 10px 0px;
     text-align: center;
     color: white;
+    border-radius: 5px;
 }
 
 #hex1 {
@@ -182,5 +182,16 @@ h2 {
 .icon-card {
     font-size: 35px;
     color: white;
+}
+
+#app-section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#app-section3>div {
+    display: flex;
 }
 
