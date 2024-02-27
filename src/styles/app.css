@@ -1,6 +1,5 @@
 #app-section1 {
     width: 100%;
-    min-height: calc(100vh - 60px);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -134,6 +133,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -161,10 +161,15 @@ h2 {
     margin: 10px;
     width: 220px;
     height: 100px;
-    padding: 50px 10px 0px;
-    text-align: center;
+    padding: 50px 20px 10px;
     color: white;
     border-radius: 5px;
+    text-align: start;
+}
+
+.text-section2 p {
+    margin-top: 5px;
+    font-size: 13px;
 }
 
 #hex1 {
