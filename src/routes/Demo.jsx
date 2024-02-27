@@ -6,8 +6,10 @@ import generateGraph from '../scripts/graphGenerator.js'
 import CodeMirrorJS from '../templates/CodeMirrorJS.jsx'
 import CodeMirrorHTML from '../templates/CodeMirrorHTML.jsx'
 import CodeMirrorCSS from '../templates/CodeMirrorCSS.jsx'
-
 import { FaPlus, FaMinus } from "react-icons/fa6";
+import { FaHtml5 } from "react-icons/fa6";
+import { FaCss3Alt } from "react-icons/fa6";
+import { RiJavascriptFill } from "react-icons/ri";
 
 export default function Demo() {
     const { t } = useTranslation();
@@ -125,23 +127,25 @@ export default function Demo() {
                 </div>
 
                 <div className='updateValues-container'>
-                    <label htmlFor="newvalue">Add a new value</label>
-                    <div>
-                        <input type="number" placeholder='new value' className='test-input' id='newvalue'
+                    <label htmlFor="newValue">Add a new value</label>
+                    <div className='values-container'>
+                        <input type="number" placeholder='new value' className='test-input' id='newValue'
                             onChange={saveNewValue} />
                         <button onClick={() => addNewValue()} className='updateValues-button'><FaPlus /></button>
                     </div>
                 </div>
 
                 <div className='updateValues-container'>
-                    <label htmlFor="addValue">Remove value</label>
-                    <select name="addValue" id="addValue" value={selectedValue}
-                        onChange={(event) => setSelectedValue(event.target.value)}>
-                        {graphObject.values.map((value, index) => (
-                            <option key={index} value={value}>{value}</option>
-                        ))}
-                    </select>
-                    <button onClick={() => removeSelectedValue(selectedValue)} className='updateValues-button'><FaMinus /></button>
+                    <label htmlFor="removeValue">Remove value</label>
+                    <div className='values-container'>
+                        <select name="removeValue" id="removeValue" value={selectedValue}
+                            onChange={(event) => setSelectedValue(event.target.value)}>
+                            {graphObject.values.map((value, index) => (
+                                <option key={index} value={value}>{value}</option>
+                            ))}
+                        </select>
+                        <button onClick={() => removeSelectedValue(selectedValue)} className='updateValues-button'><FaMinus /></button>
+                    </div>
                 </div>
 
                 <div className='demo-container'>
@@ -171,10 +175,10 @@ export default function Demo() {
             </section>
 
             <section id='code-mirror-section'>
-                <div>
-                    <button onClick={() => setActiveCode(1)}>HTML</button>
-                    <button onClick={() => setActiveCode(2)}>CSS</button>
-                    <button onClick={() => setActiveCode(3)}>JS</button>
+                <div id='code-mirror-buttons'>
+                    <button className='button-html' onClick={() => setActiveCode(1)}><FaHtml5 /></button>
+                    <button className='button-css' onClick={() => setActiveCode(2)}><FaCss3Alt /></button>
+                    <button className='button-js' onClick={() => setActiveCode(3)}><RiJavascriptFill /></button>
                 </div>
                 <div id='code-mirror-container'>
                     {activeCode == 1 && <CodeMirrorHTML />}
@@ -182,6 +186,7 @@ export default function Demo() {
                     {activeCode == 3 && <CodeMirrorJS code={graphObject} />}
                 </div>
             </section>
+
         </>
     )
 }

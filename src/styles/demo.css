@@ -5,7 +5,7 @@
     background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
     border-radius: 5px;
     width: 90%;
-    margin: 20px 0px;
+    margin: 30px 0px;
 }
 
 .demo-container {
@@ -17,6 +17,7 @@
 
 #demo-section label {
     color: var(--secondary-text);
+    margin-bottom: 3px;
 }
 
 .test-input {
@@ -42,8 +43,24 @@
     min-width: 100px;
 }
 
-#newvalue {
-    
+.values-container {
+    display: flex;
+}
+
+#removeValue {
+    width: 100px;
+    height: 36px;
+    border: none;
+    border-bottom: 1px var(--prym-cyan-color) solid;
+    border-radius: 5px;
+    background-color: #2C303A;
+    box-shadow: #ffffff26 0px 1px 1px, #00000080 0 0 0 1px;
+    color: white;
+}
+
+#removeValue:focus {
+    outline: none;
+    border-bottom: 1px var(--prym-red) solid;
 }
 
 .updateValues-button {
@@ -57,12 +74,13 @@
 }
 
 .updateValues-button svg{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 5px;
+    padding: 5px;
     border: 0;
-    font-size: 20px;
-    background-color: var(--light-white);
+    background-color: #444857;
+    color: white;
     border-bottom: 1px var(--prym-cyan-color) solid;
 }
 
@@ -130,6 +148,39 @@ canvas {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#code-mirror-buttons {
+    display: flex;
+    width: 100%;
+    background-color: var(--bg-light-container);
+    border-radius: 5px 5px 0px 0px;
+}
+
+#code-mirror-buttons>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    margin: 10px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-html {
+    background-color: #cc3f27;
+}
+
+.button-css {
+    background-color: #2e92d4;
+}
+
+.button-js {
+    background-color: #dda01d;
 }
 
 #code-mirror-container {

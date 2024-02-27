@@ -8,7 +8,6 @@ export default function generateGraph(dataGraph) {
 
     let marks = dataGraph.scaleMarks - 1;
     if (isNaN(marks)) marks = 0;
-    console.log(marks);
 
     const maxValue = Math.max.apply(null, dataGraph.values);
 
