@@ -61,10 +61,18 @@ h2 {
 
 .buttons-section1 a {
     display: flex;
-    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
     text-decoration: none;
     border-radius: 5px;
     margin: 5px;
+}
+
+#howToUse {
+    background: var(--bg-light);
+    color: white;
 }
 
 #frontPage-container>img {

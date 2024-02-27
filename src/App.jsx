@@ -16,13 +16,13 @@ function App() {
   useEffect(() => {
     const stepButtons = document.querySelectorAll('.steps-button');
     stepButtons.forEach((button, index) => {
-        if (index == activeSteps - 1) {
-          button.classList.add('focushed');
-        } else {
-          button.classList.remove('focushed');
-        }
+      if (index == activeSteps - 1) {
+        button.classList.add('focushed');
+      } else {
+        button.classList.remove('focushed');
+      }
     })
-}, [activeSteps]);
+  }, [activeSteps]);
 
   return (
     <>
@@ -33,8 +33,8 @@ function App() {
             <h2>Create your graphic</h2>
             <p className='text-section1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, neque labore rem soluta magni esse voluptate perspiciatis voluptas impedit adipisci quas minus sed molestias, facere saepe illo excepturi vel dignissimos.</p>
             <div className='buttons-section1'>
-              <a href="#app-section3">How To Use?</a>
-              <Link to="/graph-test">Prove it</Link>
+              <Link className='default-button' to="/graph-test">Prove it</Link>
+              <a id='howToUse' href="#app-section3">How To Use?</a>
             </div>
           </div>
 
@@ -105,7 +105,7 @@ function App() {
             <button className='steps-button' onClick={() => setActiveSteps(1)}>
               <p>1.Download JS</p>
               {activeSteps == 1 && <p>To start using our application, download the necessary JavaScript files. These files contain the core functionality required for generating graphics dynamically.</p>}
-              {activeSteps == 1 && <a className='default-button' href="src/scripts/graphGenerator.js" download='graphGenerator.js'>Download JS</a> }
+              {activeSteps == 1 && <a className='default-button' href="src/scripts/graphGenerator.js" download='graphGenerator.js'>Download JS</a>}
             </button>
 
             <button className='steps-button' onClick={() => setActiveSteps(2)}>
