@@ -4,6 +4,9 @@ import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
 import generateGraph from '../scripts/graphGenerator.js'
 import CodeMirrorJS from '../templates/CodeMirrorJS.jsx'
+import CodeMirrorHTML from '../templates/CodeMirrorHTML.jsx'
+import CodeMirrorCSS from '../templates/CodeMirrorCSS.jsx'
+
 import { FaPlus, FaMinus } from "react-icons/fa6";
 
 export default function Demo() {
@@ -16,11 +19,12 @@ export default function Demo() {
         },
         values: [40, 80, 70, 50, 100, 40, 92, 70, 120],
         color: '#FB5350',
-        scaleMarks: 6,
+        scaleMarks: 5,
         circles: false,
     });
     const [selectedValue, setSelectedValue] = useState();
     const [newValue, setNewValue] = useState();
+    const [activeCode, setActiveCode] = useState(3);
 
     const changeGraphWidth = (event) => {
         const { value } = event.target;
@@ -102,7 +106,7 @@ export default function Demo() {
             <h1>{t('titleTest')}</h1>
 
             <section id='graph-section'>
-                <div id='canvas-container' className="graph-container">
+                <div className="graph-container">
                     <canvas id="canvas"></canvas>
                 </div>
             </section>
@@ -130,7 +134,8 @@ export default function Demo() {
                 </div>
 
                 <div className='updateValues-container'>
-                    <select name="" id="" value={selectedValue}
+                    <label htmlFor="addValue">Remove value</label>
+                    <select name="addValue" id="addValue" value={selectedValue}
                         onChange={(event) => setSelectedValue(event.target.value)}>
                         {graphObject.values.map((value, index) => (
                             <option key={index} value={value}>{value}</option>
@@ -166,8 +171,15 @@ export default function Demo() {
             </section>
 
             <section id='code-mirror-section'>
-                <div id='code-mirror-js'>
-                    <CodeMirrorJS code={graphObject} />
+                <div>
+                    <button onClick={() => setActiveCode(1)}>HTML</button>
+                    <button onClick={() => setActiveCode(2)}>CSS</button>
+                    <button onClick={() => setActiveCode(3)}>JS</button>
+                </div>
+                <div id='code-mirror-container'>
+                    {activeCode == 1 && <CodeMirrorHTML />}
+                    {activeCode == 2 && <CodeMirrorCSS />}
+                    {activeCode == 3 && <CodeMirrorJS code={graphObject} />}
                 </div>
             </section>
         </>

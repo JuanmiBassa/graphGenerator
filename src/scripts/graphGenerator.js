@@ -6,7 +6,9 @@ export default function generateGraph(dataGraph) {
     canvas.height = dataGraph.canvasProps.height;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    if (dataGraph.scaleMarks < 1) dataGraph.scaleMarks = 1;
+    let marks = dataGraph.scaleMarks - 1;
+    if (isNaN(marks)) marks = 0;
+    console.log(marks);
 
     const maxValue = Math.max.apply(null, dataGraph.values);
 
@@ -14,12 +16,12 @@ export default function generateGraph(dataGraph) {
         return value / maxValue * (canvas.height - 20);
     });
 
-    drawCanvasLinesAndText(canvas, ctx, dataGraph, maxValue);
+    drawCanvasLinesAndText(canvas, ctx, marks, maxValue);
 
     let startPosX, startPosY, endPosX, endPosY = 0;
     ctx.beginPath();
 
-    let marginLeft = 40;
+    let marginLeft = marks < 3 ? marks < 1 ? 0 : 10 : 30;
     for (let x = 0; x < scaledValues.length; x++) {
         let posX = x * ((canvas.width - marginLeft - 10) / (scaledValues.length - 1));
         let posY = canvas.height - scaledValues[x];
@@ -69,11 +71,11 @@ function drawCircle(x, y, radius, color, ctx) {
     ctx.fill();
 }
 
-function drawCanvasLinesAndText(canvas, ctx, dataGraph, maxValue) {
-    let spaceBetweenLines = (canvas.height - 20) / (dataGraph.scaleMarks);
-    let StatNumbers = maxValue / dataGraph.scaleMarks;
+function drawCanvasLinesAndText(canvas, ctx, marks, maxValue) {
+    let spaceBetweenLines = (canvas.height - 20) / (marks);
+    let StatNumbers = maxValue / marks;
 
-    for (let i = 0; i <= dataGraph.scaleMarks; i++) {
+    for (let i = 0; i <= marks; i++) {
         let y = i * spaceBetweenLines + 15;
 
         ctx.font = '15px Arial';

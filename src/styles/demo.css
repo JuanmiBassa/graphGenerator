@@ -3,8 +3,7 @@
     justify-content: center;
     flex-wrap: wrap;
     background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
-    border: 1px var(--border) solid;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 90%;
     margin: 20px 0px;
 }
@@ -113,9 +112,8 @@
 
 .graph-container {
     padding: 20px 0px;
-    border: 1px var(--border) solid;
     background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,12 +129,12 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-#code-mirror-js {
+#code-mirror-container {
     width: 100%;
     margin-bottom: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
-    border: 1px var(--border) solid;
 }

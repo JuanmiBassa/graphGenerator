@@ -5,12 +5,12 @@
 }
 
 :root {
-    --bg-dark: #0C172B;
-    --bg-darkLight: #222A41;
+    --bg-dark: #131417;
+    --bg-darkLight: #1D1E22;
   
-    --bg-dark-container: #15233E;
-    --bg-light-container: #384363;
-    --border: #727AA1;
+    --bg-dark-container: #252830;
+    --bg-light-container: #2C303A;
+
     --inset-input: #00000033;
     --inset-shadow: #ffffff26 0px 1px 1px, inset #00000080 0 0 0 1px;
   
@@ -110,7 +110,6 @@ header nav ul li a {
     padding: 20px;
     border-radius: 10px;
     background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
-    border: 1px var(--border) solid;
 }
 
 #languages {
