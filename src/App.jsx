@@ -7,6 +7,7 @@ import { FaSackDollar } from "react-icons/fa6"
 import { FaUnlink } from "react-icons/fa"
 import { useState } from 'react'
 import frontPageImg from './assets/frontpage.png'
+import step1Img from './assets/step1.jpg'
 
 function App() {
   const [activeSteps, setActiveSteps] = useState(1);
@@ -93,20 +94,50 @@ function App() {
         <h2>Learn the code only in four steps</h2>
         <div>
           <div id='buttons-section3'>
-            <button className='steps' onClick={() => setActiveSteps(1)}>1.Download JS</button>
-            <button className='steps' onClick={() => setActiveSteps(2)}>2.Import Your Project</button>
-            <button className='steps' onClick={() => setActiveSteps(3)}>3.Customize the default object</button>
-            <button className='steps' onClick={() => setActiveSteps(4)}>4.Call global function</button>
+            <button className='steps' onClick={() => setActiveSteps(1)}>
+              <p>1.Download JS</p>
+              {activeSteps == 1 && <p>Obtain the necessary JavaScript files</p>}
+            </button>
+
+            <button className='steps' onClick={() => setActiveSteps(2)}>
+              <p>2.Import Your Project</p>
+              {activeSteps == 2 && <p>Link the files to your HTML.</p>}
+            </button>
+
+            <button className='steps' onClick={() => setActiveSteps(3)}>
+              <p>3.Customize the default object</p>
+              {activeSteps == 3 && <p>Adjust the code to your needs.</p>}
+            </button>
+
+            <button className='steps' onClick={() => setActiveSteps(4)}>
+              <p>4.Call global function</p>
+              {activeSteps == 4 && <p>Utilize globally available functions.</p>}
+            </button>
           </div>
 
           <div className='steps'>
-            {activeSteps == 1 && <div></div>}
-            {activeSteps == 2 && <div></div>}
-            {activeSteps == 3 && <div></div>}
-            {activeSteps == 4 && <div></div>}
+            {activeSteps == 1 &&
+              <div>
+                <img src={step1Img} alt="" />
+              </div>
+            }
+            {activeSteps == 2 &&
+              <div>
+                <img src={step1Img} alt="" />
+              </div>
+            }
+            {activeSteps == 3 &&
+              <div>
+                <img src={step1Img} alt="" />
+              </div>
+            }
+            {activeSteps == 4 &&
+              <div>
+                <img src={step1Img} alt="" />
+              </div>
+            }
           </div>
         </div>
-
 
       </section>
 
