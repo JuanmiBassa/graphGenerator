@@ -59,20 +59,22 @@ h2 {
     display: flex;
 }
 
-.buttons-section1 a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 35px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 5px;
-}
-
 #howToUse {
     background: var(--bg-light);
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 15px;
+    transition: 0.2s;
+}
+
+#howToUse:hover {
+    filter: brightness(1.2);
 }
 
 #frontPage-container>img {

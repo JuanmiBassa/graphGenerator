@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <section id='app-section1'>
-        <h1>GRAPHIC GENERATOR</h1>
+        <h1>GRAPH GENERATOR</h1>
         <div id='section1-container'>
           <div>
             <h2>Create your graphic</h2>
@@ -48,7 +48,7 @@ function App() {
 
       <section id='app-section2'>
         <div className='titulo'>
-          <h2>We Believe in Graphics</h2>
+          <h2>ADVANTAGES</h2>
         </div>
 
         <div className='card-container'>
