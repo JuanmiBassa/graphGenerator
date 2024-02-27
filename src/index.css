@@ -10,6 +10,7 @@
   
     --bg-dark-container: #252830;
     --bg-light-container: #2C303A;
+    --bg-light: #4A4D57;
 
     --inset-input: #00000033;
     --inset-shadow: #ffffff26 0px 1px 1px, inset #00000080 0 0 0 1px;
@@ -43,7 +44,6 @@ input {
     background: var(--default-button);
     padding: 5px;
     border-radius: 5px;
-    margin-top: 5px;
     width: 100px;
     text-decoration: none;
     color: var(--bg-dark);
@@ -66,11 +66,10 @@ header {
 
 #logo {
     font-size: 40px;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--prym-blue-color);
+    color: white;
 }
 
 header nav ul {

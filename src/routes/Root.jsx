@@ -26,7 +26,7 @@ export default function Root() {
                 <nav>
                     <ul>
                         <li className='nav-list'>
-                            <Link to="/demo">{t('navTest')}</Link>
+                            <Link className='default-button' to="/demo">{t('navTest')}</Link>
                         </li>
                         <li className='nav-list'>
                             <MdEmail className="email-icon link-icon" />
