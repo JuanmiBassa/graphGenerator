@@ -5,13 +5,24 @@ import { IoColorFillSharp } from "react-icons/io5"
 import { FaScrewdriverWrench } from "react-icons/fa6"
 import { FaSackDollar } from "react-icons/fa6"
 import { FaUnlink } from "react-icons/fa"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import frontPageImg from './assets/frontpage.png'
 import step1Img from './assets/step1.jpg'
 
 function App() {
   const [activeSteps, setActiveSteps] = useState(1);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const stepButtons = document.querySelectorAll('.steps-button');
+    stepButtons.forEach((button, index) => {
+        if (index == activeSteps - 1) {
+          button.classList.add('focushed');
+        } else {
+          button.classList.remove('focushed');
+        }
+    })
+}, [activeSteps]);
 
   return (
     <>
@@ -51,8 +62,6 @@ function App() {
             </div>
           </div>
 
-
-
           <div className='card'>
             <div className='hexagon' id='hex2'>
               <IoColorFillSharp className='icon-card' />
@@ -91,25 +100,25 @@ function App() {
 
       <section id='app-section3'>
         <h1>How To Use</h1>
-        <h2>Learn the code only in four steps</h2>
         <div>
           <div id='buttons-section3'>
-            <button className='steps' onClick={() => setActiveSteps(1)}>
+            <button className='steps-button' onClick={() => setActiveSteps(1)}>
               <p>1.Download JS</p>
               {activeSteps == 1 && <p>Obtain the necessary JavaScript files</p>}
+              {activeSteps == 1 && <a href="./scripts/graphGenerator.js" download='graphGenerator.js'>Download JS</a> }
             </button>
 
-            <button className='steps' onClick={() => setActiveSteps(2)}>
+            <button className='steps-button' onClick={() => setActiveSteps(2)}>
               <p>2.Import Your Project</p>
               {activeSteps == 2 && <p>Link the files to your HTML.</p>}
             </button>
 
-            <button className='steps' onClick={() => setActiveSteps(3)}>
+            <button className='steps-button' onClick={() => setActiveSteps(3)}>
               <p>3.Customize the default object</p>
               {activeSteps == 3 && <p>Adjust the code to your needs.</p>}
             </button>
 
-            <button className='steps' onClick={() => setActiveSteps(4)}>
+            <button className='steps-button' onClick={() => setActiveSteps(4)}>
               <p>4.Call global function</p>
               {activeSteps == 4 && <p>Utilize globally available functions.</p>}
             </button>
