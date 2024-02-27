@@ -184,6 +184,7 @@ h2 {
     flex-wrap: wrap;
     width: 90%;
     align-items: center;
+    justify-content: center;
 }
 
 #buttons-section3 {
@@ -236,3 +237,13 @@ h2 {
 }
 
 
+@media screen and (max-width: 1024px) {
+    #buttons-section3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .steps-button {
+        width: 100%;
+    }
+}
