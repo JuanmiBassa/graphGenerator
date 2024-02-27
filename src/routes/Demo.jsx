@@ -188,7 +188,7 @@ export default function Demo() {
                     {activeCode == 3 && <CodeMirrorJS code={graphObject} />}
                 </div>
             </section>
-
+            
         </>
     )
 }

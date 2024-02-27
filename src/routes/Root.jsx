@@ -51,6 +51,9 @@ export default function Root() {
             <main>
                 <Outlet />
             </main>
+            <footer>
+                <p>By Juanmi Bassa & Toni Montero</p>
+            </footer>
         </>
     )
 }
