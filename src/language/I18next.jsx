@@ -15,7 +15,14 @@ i18n
           es: 'Spanish',
 
           // APP
+          titleApp: 'GRAPH GENERATOR',
 
+          subtitleApp: 'Create your graph',
+          textFirstSection: 'Immerse yourself in the fascinating world of charting and unlock the potential of your data by transforming it into dynamic and meaningful visualizations. Explore our tools and discover how you can turn complex information into impactful visual narratives that will help you make informed decisions and communicate your ideas effectively.',
+          textButton1: 'Prove it',
+          textButton2: 'How To Use?',
+
+          title2App: 'ADVANTAGES',
 
           // DEMO
           titleDemo: 'Test the program',
@@ -40,7 +47,14 @@ i18n
           es: 'Español',
 
           // APP
+          titleApp: 'GENERADOR DE GRAFICAS',
 
+          subtitleApp: 'Crea tu grafica',
+          textFirstSection: 'Sumérgete en el fascinante mundo de la creación de gráficas y desbloquea el potencial de tus datos al transformarlos en visualizaciones dinámicas y significativas. Explora nuestras herramientas y descubre cómo puedes convertir información compleja en narrativas visuales impactantes que te ayudarán a tomar decisiones informadas y a comunicar tus ideas de manera efectiva.',
+          textButton1: 'Pruebalo',
+          textButton2: 'Como Se Usa?',
+
+          title2App: 'VENTAJAS',
 
           // DEMO
           titleDemo: 'Testea el programa',

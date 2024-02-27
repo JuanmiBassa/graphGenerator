@@ -27,14 +27,14 @@ function App() {
   return (
     <>
       <section id='app-section1'>
-        <h1>GRAPH GENERATOR</h1>
+        <h1>{t('titleApp')}</h1>
         <div id='section1-container'>
           <div>
-            <h2>Create your graph</h2>
-            <p className='text-section1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, neque labore rem soluta magni esse voluptate perspiciatis voluptas impedit adipisci quas minus sed molestias, facere saepe illo excepturi vel dignissimos.</p>
+            <h2>{t('subtitleApp')}</h2>
+            <p className='text-section1'>{t('textFirstSection')}</p>
             <div className='buttons-section1'>
-              <Link className='default-button' to="/graph-test">Prove it</Link>
-              <a id='howToUse' href="#app-section3">How To Use?</a>
+              <Link className='default-button' to="/graph-test">{t('textButton1')}</Link>
+              <a id='howToUse' href="#app-section3">{t('textButton2')}</a>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ function App() {
 
       <section id='app-section2'>
         <div className='titulo'>
-          <h2>ADVANTAGES</h2>
+          <h2>{t('title2App')}</h2>
         </div>
 
         <div className='card-container'>
@@ -110,17 +110,17 @@ function App() {
 
             <button className='steps-button' onClick={() => setActiveSteps(2)}>
               <p>2.Import Your Project</p>
-              {activeSteps == 2 && <p>Link the files to your HTML.</p>}
+              {activeSteps == 2 && <p>Link the files to your HTML. This step is crucial for integrating the functionality into your project seamlessly.</p>}
             </button>
 
             <button className='steps-button' onClick={() => setActiveSteps(3)}>
               <p>3.Customize the default object</p>
-              {activeSteps == 3 && <p>Adjust the code to your needs.</p>}
+              {activeSteps == 3 && <p>Adjust the code to your needs. Customize the default object to match your project requirements perfectly.</p>}
             </button>
 
             <button className='steps-button' onClick={() => setActiveSteps(4)}>
               <p>4.Call global function</p>
-              {activeSteps == 4 && <p>Utilize globally available functions.</p>}
+              {activeSteps == 4 && <p>Utilize globally available functions. Call the functions anywhere in your project for enhanced functionality.</p>}
             </button>
           </div>
 
