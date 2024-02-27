@@ -6,10 +6,6 @@
     flex-direction: column;
 }
 
-#app-section1>div {
-    width: 45%;
-    text-align: justify;
-}
 
 .text-section1 {
     color: var(--secondary-text);
@@ -18,6 +14,9 @@
 
 #section1-container {
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -28,7 +27,7 @@ h1 {
     letter-spacing: 1px;
 }
 
-.container h2 {
+#app-section1 h2 {
     margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
@@ -37,8 +36,8 @@ h1 {
     align-items: center;
 }
 
-.container h2:after,
-.container h2:before {
+#app-section1 h2:after,
+#app-section1 h2:before {
     content: " ";
     display: block;
     border-bottom: 1px solid #ccc;

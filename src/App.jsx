@@ -17,7 +17,7 @@ function App() {
       <section id='app-section1'>
         <h1>GRAPHIC GENERATOR</h1>
         <h2>Create your graphic</h2>
-        <div className='container' id='section1-container'>
+        <div id='section1-container'>
           <p className='text-section1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, neque labore rem soluta magni esse voluptate perspiciatis voluptas impedit adipisci quas minus sed molestias, facere saepe illo excepturi vel dignissimos.</p>
           <div className='buttons-section1'>
             <a href="#app-section3">How To Use?</a>
