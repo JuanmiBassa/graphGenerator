@@ -56,7 +56,7 @@ export default function Demo() {
     }
 
     const addNewValue = () => {
-        const updatedValues = [...graphObject.values, parseInt(newValue)];
+        const updatedValues = [...graphObject.values, newValue];
 
         setGraphObject({
             ...graphObject,
@@ -115,19 +115,19 @@ export default function Demo() {
 
             <section id='demo-section'>
                 <div className='demo-container'>
-                    <label htmlFor="graph_width">Max Width</label>
+                    <label htmlFor="graph_width">{t('graphWidth')}</label>
                     <input type="number" name='graph_width' id='graph_width' className='test-input'
                         onChange={changeGraphWidth} value={graphObject.canvasProps.maxWidth} />
                 </div>
 
                 <div className='demo-container'>
-                    <label htmlFor="graph_height">Height</label>
+                    <label htmlFor="graph_height">{t('graphHeight')}</label>
                     <input type="number" name='graph_height' id='graph_height' className='test-input'
                         onChange={changeGraphHeigh} value={graphObject.canvasProps.height} />
                 </div>
 
                 <div className='updateValues-container'>
-                    <label htmlFor="newValue">Add a new value</label>
+                    <label htmlFor="newValue">{t('graphAddValue')}</label>
                     <div className='values-container'>
                         <input type="number" placeholder='new value' className='test-input' id='newValue'
                             onChange={saveNewValue} />
@@ -136,7 +136,7 @@ export default function Demo() {
                 </div>
 
                 <div className='updateValues-container'>
-                    <label htmlFor="removeValue">Remove value</label>
+                    <label htmlFor="removeValue">{t('graphDeleteValue')}</label>
                     <div className='values-container'>
                         <select name="removeValue" id="removeValue" value={selectedValue}
                             onChange={(event) => setSelectedValue(event.target.value)}>
@@ -155,21 +155,24 @@ export default function Demo() {
                 </div>
 
                 <div className='demo-container'>
-                    <label htmlFor="graph-scaleMarks">Scale marks</label>
+                    <label htmlFor="graph-scaleMarks">{t('graphScaleMarks')}</label>
                     <input type="number" name='graph-scaleMarks' id='graph-scaleMarks' className='test-input'
                         onChange={changeGraphMarks} value={graphObject.scaleMarks} />
                 </div>
 
-                <div className="radio-input demo-container">
-                    <div className='radio-container'>
-                        <label htmlFor="radio-circle">Circles</label>
-                        <input name="style-radio" type="radio" className="radio-style" id='radio-circle'
-                            value="true" onChange={changeGraphCircles} checked={graphObject.circles === true} />
-                    </div>
-                    <div className='radio-container'>
-                        <label htmlFor="radio-none">None</label>
-                        <input name="style-radio" type="radio" className="radio-style" id='radio-none'
-                            value="false" onChange={changeGraphCircles} checked={graphObject.circles === false} />
+                <div id='radio-container' className="demo-container">
+                    <label>{t('graphStyle')}</label>
+                    <div id='radio-inputs'>
+                        <div>
+                            <label htmlFor="radio-circle">{t('graphStyle1')}</label>
+                            <input name="style-radio" type="radio" className="radio-style" id='radio-circle'
+                                value="true" onChange={changeGraphCircles} checked={graphObject.circles === true} />
+                        </div>
+                        <div>
+                            <label htmlFor="radio-none">{t('graphStyle2')}</label>
+                            <input name="style-radio" type="radio" className="radio-style" id='radio-none'
+                                value="false" onChange={changeGraphCircles} checked={graphObject.circles === false} />
+                        </div>
                     </div>
                 </div>
             </section>

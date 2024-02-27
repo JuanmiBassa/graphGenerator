@@ -4,13 +4,15 @@ import { PiGraphFill } from "react-icons/pi"
 import { IoIosNotifications } from "react-icons/io"
 import { MdEmail } from "react-icons/md"
 import { IoMdSettings } from "react-icons/io"
-
+import i18n from '../language/I18next.jsx';
 import { useTranslation } from 'react-i18next'
-import LanguageSelector from "../language/LanguageSelector.jsx"
-import i18n from '../language/I18next.jsx'
 
 export default function Root() {
     const { t } = useTranslation();
+
+    const changeLanguage = (language) => {
+        i18n.changeLanguage(language);
+    };
 
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     const toggleSettings = () => setIsSettingsOpen(!isSettingsOpen);
@@ -35,7 +37,11 @@ export default function Root() {
                         <li className='nav-list'>
                             <IoMdSettings className="settings-icon link-icon" onClick={toggleSettings} />
                             <div className={`settings-dropdown ${isSettingsOpen ? 'active' : ''}`}>
-                                <LanguageSelector i18n={i18n} />
+                                <label htmlFor="languages">{t('modalLenguage')}</label>
+                                <select name="languages" id="languages" onChange={(event) => changeLanguage(event.target.value)}>
+                                    <option value="en">{t('en')}</option>
+                                    <option value="es">{t('es')}</option>
+                                </select>
                             </div>
                         </li>
                     </ul>

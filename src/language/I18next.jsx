@@ -9,24 +9,50 @@ i18n
         translation: {
           // ROOT
           navTest: 'Try Demo',
+          modalLenguage: 'Change language',
+          // ROOT - LANGUAGES
+          en: 'English',
+          es: 'Spanish',
 
           // APP
           
           
-          // TEST
+          // DEMO
           titleTest: 'Test the program',
+
+          graphWidth: 'Max Width',
+          graphHeight: 'Max Height',
+          graphAddValue: 'Add value',
+          graphDeleteValue: 'Remove value',
+          graphScaleMarks: 'Scale marks',
+          graphStyle: 'Style',
+          graphStyle1: 'Circles',
+          graphStyle2: 'None',
         },
       },
       es: {
         translation: {
           // ROOT
           navTest: 'Probar Demo',
+          modalLenguage: 'Cambiar idioma',
+          // ROOT - LANGUAGES
+          en: 'Inglés',
+          es: 'Español',
 
           // APP
           
 
-          // TEST
+          // DEMO
           titleTest: 'Testea el programa',
+
+          graphWidth: 'Anchura máxima',
+          graphHeight: 'Altura máxima',
+          graphAddValue: 'Agregar valor',
+          graphDeleteValue: 'Eliminar valor',
+          graphScaleMarks: 'Marcas de escala',
+          graphStyle: 'Estilo',
+          graphStyle1: 'Circulos',
+          graphStyle2: 'Ninguno',
         },
       },
     },

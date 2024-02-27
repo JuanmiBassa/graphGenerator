@@ -9,10 +9,12 @@
 }
 
 .demo-container {
-    display: flex;
-    flex-direction: column;
     margin: 20px;
     min-width: 100px;
+}
+
+.demo-container>div{
+    display: flex;
 }
 
 #demo-section label {
@@ -114,10 +116,20 @@
         transparent 60%);
 }
 
-.radio-container {
+#radio-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
+    flex-direction: column;
+}
+
+#radio-inputs {
+    display: flex;
+}
+
+#radio-container div {
+    display: flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 #graph-section {

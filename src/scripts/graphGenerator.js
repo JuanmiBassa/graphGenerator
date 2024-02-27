@@ -20,7 +20,7 @@ export default function generateGraph(dataGraph) {
     let startPosX, startPosY, endPosX, endPosY = 0;
     ctx.beginPath();
 
-    let marginLeft = marks < 3 ? marks < 1 ? 0 : 10 : 30;
+    let marginLeft = marks < 3 ? marks < 2 ? 5 : 15 : 30;
     for (let x = 0; x < scaledValues.length; x++) {
         let posX = x * ((canvas.width - marginLeft - 10) / (scaledValues.length - 1));
         let posY = canvas.height - scaledValues[x];
@@ -77,26 +77,27 @@ function drawCanvasLinesAndText(canvas, ctx, marks, maxValue) {
     for (let i = 0; i <= marks; i++) {
         let y = i * spaceBetweenLines + 15;
 
+        ctx.beginPath();
+        ctx.strokeStyle = '#181C27';
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+
         ctx.font = '15px Arial';
         ctx.fillStyle = '#cecece';
         ctx.textAlign = 'start';
         let num = Math.abs(StatNumbers * i - (maxValue));
         ctx.fillText(abbreviateNumber(num), 0, y - 3);
 
-        ctx.beginPath();
-        ctx.strokeStyle = '#181C27';
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
     }
 }
 
 function abbreviateNumber(num) {
-    if (num < 0) return num;
+    if (num == 0) return num;
+    else if (num < 1) return num.toFixed(3);
     else if (num < 100) return Math.trunc(num);
-    else if (num >= 100 && num < 1000) {
-        return Math.trunc(num);
-    } else if (num >= 1000 && num < 1000000) {
+    else if (num >= 100 && num < 1000) return Math.trunc(num);
+    else if (num >= 1000 && num < 1000000) {
         num /= 1000;
         return `${num.toFixed(2)}K`
     } else if (num >= 1000000 && num < 1000000000) {
