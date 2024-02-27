@@ -112,6 +112,10 @@ h2 {
     color: #090920;
 }
 
+.frontPage {
+    display: flex;
+}
+
 
 #app-section2 {
     text-align: center;
@@ -192,6 +196,10 @@ h2 {
 }
 
 #app-section3>div {
+    display: flex;
+}
+
+#buttons-section3 {
     display: flex;
 }
 

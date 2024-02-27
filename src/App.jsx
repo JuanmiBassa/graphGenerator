@@ -6,6 +6,7 @@ import { FaScrewdriverWrench } from "react-icons/fa6"
 import { FaSackDollar } from "react-icons/fa6"
 import { FaUnlink } from "react-icons/fa"
 import { useState } from 'react'
+import frontPageImg from './assets/frontpage.png'
 
 function App() {
   const [activeSteps, setActiveSteps] = useState(1);
@@ -21,6 +22,10 @@ function App() {
           <div className='buttons-section1'>
             <a href="#app-section3">How To Use?</a>
             <Link to="/graph-test">Prove it</Link>
+          </div>
+
+          <div className='frontPage'>
+            <img src={frontPageImg} alt="" />
           </div>
         </div>
       </section>
@@ -83,7 +88,7 @@ function App() {
         <h1>How To Use</h1>
         <h2>Learn the code only in four steps</h2>
         <div>
-          <div>
+          <div id='buttons-section3'>
             <button className='steps' onClick={() => setActiveSteps(1)}>1.Download JS</button>
             <button className='steps' onClick={() => setActiveSteps(2)}>2.Import Your Project</button>
             <button className='steps' onClick={() => setActiveSteps(3)}>3.Customize the default object</button>
