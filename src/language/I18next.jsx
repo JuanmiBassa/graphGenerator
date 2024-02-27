@@ -15,10 +15,10 @@ i18n
           es: 'Spanish',
 
           // APP
-          
-          
+
+
           // DEMO
-          titleTest: 'Test the program',
+          titleDemo: 'Test the program',
 
           graphWidth: 'Max Width',
           graphHeight: 'Max Height',
@@ -40,10 +40,10 @@ i18n
           es: 'Español',
 
           // APP
-          
+
 
           // DEMO
-          titleTest: 'Testea el programa',
+          titleDemo: 'Testea el programa',
 
           graphWidth: 'Anchura máxima',
           graphHeight: 'Altura máxima',

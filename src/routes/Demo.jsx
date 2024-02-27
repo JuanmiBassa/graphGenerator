@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/demo.css'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
@@ -27,6 +26,10 @@ export default function Demo() {
     const [selectedValue, setSelectedValue] = useState();
     const [newValue, setNewValue] = useState();
     const [activeCode, setActiveCode] = useState(3);
+
+    useEffect(() => {
+        generateGraph(graphObject);
+    }, [graphObject]);
 
     const changeGraphWidth = (event) => {
         const { value } = event.target;
@@ -99,13 +102,9 @@ export default function Demo() {
         }));
     };
 
-    useEffect(() => {
-        generateGraph(graphObject);
-    }, [graphObject]);
-
     return (
         <>
-            <h1>{t('titleTest')}</h1>
+            <h1>{t('titleDemo')}</h1>
 
             <section id='graph-section'>
                 <div className="graph-container">
