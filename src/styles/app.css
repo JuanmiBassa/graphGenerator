@@ -167,9 +167,13 @@ h2 {
     text-align: start;
 }
 
+.text-section2 h3 {
+    border-bottom: 1px var(--secondary-text) solid;
+}
+
 .text-section2 p {
     margin-top: 5px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 #hex1 {
