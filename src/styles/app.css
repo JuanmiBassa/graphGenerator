@@ -178,6 +178,11 @@ h2 {
 
 .steps {
     text-align: start;
+    max-width: 500px;
+}
+
+.steps img {
+    width: 100%;
 }
 
 

@@ -117,24 +117,16 @@ function App() {
 
           <div className='steps'>
             {activeSteps == 1 &&
-              <div>
-                <img src={step1Img} alt="" />
-              </div>
+              <img src={step1Img} alt="" />
             }
             {activeSteps == 2 &&
-              <div>
-                <img src={step1Img} alt="" />
-              </div>
+              <img src={step1Img} alt="" />
             }
             {activeSteps == 3 &&
-              <div>
-                <img src={step1Img} alt="" />
-              </div>
+              <img src={step1Img} alt="" />
             }
             {activeSteps == 4 &&
-              <div>
-                <img src={step1Img} alt="" />
-              </div>
+              <img src={step1Img} alt="" />
             }
           </div>
         </div>
