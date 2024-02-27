@@ -61,55 +61,6 @@ h2 {
     margin: 5px;
 }
 
-.buttons-section1 a:first-child {
-    font-size: 1.2rem;
-    padding: 5px 10px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #0e0e1a;
-    font-weight: 700;
-    transition: 0.6s;
-    box-shadow: 0px 0px 60px #1f4c65;
-    -webkit-box-reflect: below 10px linear-gradient(to bottom, #00000000, #00000066);
-    color: var(--secondary-text);
-}
-
-.buttons-section1 a:first-child:active {
-    scale: 0.92;
-}
-
-.buttons-section1 a:first-child:hover {
-    background: #021d4e;
-    background: linear-gradient(270deg, #021d4eae 0%, #1fd7e8df 60%);
-    color: #090920;
-}
-
-.buttons-section1 a:last-child {
-    font-size: 1.2rem;
-    padding: 5px 10px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #0e0e1a;
-    font-weight: 700;
-    transition: 0.6s;
-    box-shadow: 0px 0px 60px #1f4c65;
-    -webkit-box-reflect: below 10px linear-gradient(to bottom, #00000000, #00000066);
-    color: var(--secondary-text);
-}
-
-.buttons-section1 a:last-child:active {
-    scale: 0.92;
-}
-
-.buttons-section1 a:last-child:hover {
-    background: #021d4e;
-    background: linear-gradient(270deg, #021d4eae 0%, #1fd7e8df 60%);
-    color: #090920;
-}
 
 .frontPage {
     display: flex;
@@ -169,6 +120,7 @@ h2 {
 
 .text-section2 h3 {
     border-bottom: 1px var(--secondary-text) solid;
+    padding-bottom: 3px;
 }
 
 .text-section2 p {
