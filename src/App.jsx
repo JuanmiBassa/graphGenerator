@@ -5,9 +5,11 @@ import { IoColorFillSharp } from "react-icons/io5"
 import { FaScrewdriverWrench } from "react-icons/fa6"
 import { FaSackDollar } from "react-icons/fa6"
 import { FaUnlink } from "react-icons/fa"
+import { useState } from 'react'
 
 function App() {
-  const { t } = useTranslation();
+  const [activeSteps, setActiveSteps] = useState(1);
+  const { t } = useTranslation(); 
 
   return (
     <>
@@ -19,13 +21,6 @@ function App() {
           <div className='buttons-section1'>
             <a href="#app-section3">How To Use?</a>
             <Link to="/graph-test">Prove it</Link>
-          </div>
-        </div>
-
-        <div>
-          <div id='burbuja1'>
-            <div id='burbuja2'>
-            </div>
           </div>
         </div>
       </section>
@@ -83,33 +78,21 @@ function App() {
         </div>
       </section>
 
-      <section id='app-section3'>
-        <div className='titulo'>
-          <h2>How to Use</h2>
+      <section>
+        <div>
+          <button onClick={() => setActiveSteps(1)}>1.Download JS</button>
+          <button onClick={() => setActiveSteps(2)}>2.Import Your Project</button>
+          <button onClick={() => setActiveSteps(3)}>3.Customize the default object</button>
+          <button onClick={() => setActiveSteps(4)}>4.Call global function</button>
         </div>
 
-
-        <div className='step'>
-          <h3>1. Descargar JS</h3>
-          <Link to="#">Download</Link>
+        <div>
+          {activeSteps == 1 && <div></div>}
+          {activeSteps == 2 && <div></div>}
+          {activeSteps == 3 && <div></div>}
+          {activeSteps == 4 && <div></div>}
         </div>
 
-        <div className='step'>
-          <h3>2. Importar en tu proyecto</h3>
-          <p>Importa el archivo JS en tu proyecto.</p>
-        </div>
-
-        <div className='step'>
-          <h3>3. Personalizar el default</h3>
-          <Link to="#">Customize</Link>
-          <p>Personaliza la configuración por defecto según tus necesidades.</p>
-        </div>
-
-
-        <div className='step'>
-          <h3>4. Llamar a la función</h3>
-          <p>Llama a la función en tu código para utilizarla.</p>
-        </div>
       </section>
 
     </>

@@ -112,62 +112,6 @@ h2 {
     color: #090920;
 }
 
-#burbuja1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    width: 100%;
-    border-radius: 65% 35% 73% 27% / 36% 34% 66% 64%;
-    background: linear-gradient(45deg, var(--prym-blue-color) 0%, var(--prym-cyan-color) 100%);
-    animation: animate 10s infinite ease-in-out;
-}
-
-#burbuja2 {
-    height: calc(100% - 10px);
-    width: calc(100% - 10px);
-    border-radius: 65% 35% 73% 27% / 36% 34% 66% 64%;
-    background: linear-gradient(45deg, var(--prym-purple-color) 0%, var(--prym-lightPurple-color) 100%);
-    animation: animate2 10s infinite ease-in-out;
-}
-
-@keyframes animate {
-    0% {
-        border-radius: 65% 35% 73% 27% / 36% 34% 66% 64%;
-
-    }
-
-    50% {
-        border-radius: 20% 80% 53% 47% / 74% 72% 28% 26%;
-
-    }
-
-    100% {
-        border-radius: 65% 35% 73% 27% / 36% 34% 66% 64%;
-    }
-
-}
-
-@keyframes animate2 {
-    0% {
-        border-radius: 27% 73% 75% 25% / 29% 26% 74% 71%;
-
-    }
-
-    33% {
-        border-radius: 67% 33% 66% 34% / 64% 83% 17% 36%;
-
-    }
-
-    66% {
-        border-radius: 39% 61% 42% 58% / 55% 77% 23% 45%;
-    }
-
-    100% {
-        border-radius: 27% 73% 75% 25% / 29% 26% 74% 71%;
-    }
-
-}
 
 #app-section2 {
     text-align: center;
@@ -240,11 +184,3 @@ h2 {
     color: white;
 }
 
-
-.step {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-}
