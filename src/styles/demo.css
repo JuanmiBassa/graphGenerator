@@ -172,20 +172,20 @@ canvas {
 }
 
 .button-html {
-    background-color: #cc3f27;
+    background-color: #be3820;
 }
 
 .button-css {
-    background-color: #2e92d4;
+    background-color: #257eb9;
 }
 
 .button-js {
-    background-color: #dda01d;
+    background-color: #cc9317;
 }
 
 #code-mirror-container {
     width: 100%;
     margin-bottom: 30px;
-    border-radius: 5px;
+    border-radius: 0px 0px 5px 5px;
     overflow: hidden;
 }
