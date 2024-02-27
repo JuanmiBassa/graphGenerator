@@ -23,7 +23,7 @@
     --light-white: #E8E9EB;
     --secondary-text: #bfcacf;
   
-    --prym-green: #25f174;
+    --default-button: #47CF73;
     --prym-red: #fc513a;
   }
 
@@ -40,12 +40,14 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #66c6e9;
+    background: var(--default-button);
     padding: 5px;
     border-radius: 5px;
     margin-top: 5px;
     width: 100px;
     text-decoration: none;
+    color: var(--bg-dark);
+    font-weight: bolder;
 }
 
 /* HEADER, ROOT.JSX */
