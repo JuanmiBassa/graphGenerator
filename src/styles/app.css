@@ -214,6 +214,7 @@ h2 {
 .steps-button p:nth-child(2) {
     color: var(--secondary-text);
     font-size: 15px;
+    margin: 5px 0px;
 }
 
 .focushed {
