@@ -30,7 +30,7 @@ function App() {
         <h1>GRAPH GENERATOR</h1>
         <div id='section1-container'>
           <div>
-            <h2>Create your graphic</h2>
+            <h2>Create your graph</h2>
             <p className='text-section1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, neque labore rem soluta magni esse voluptate perspiciatis voluptas impedit adipisci quas minus sed molestias, facere saepe illo excepturi vel dignissimos.</p>
             <div className='buttons-section1'>
               <Link className='default-button' to="/graph-test">Prove it</Link>
