@@ -1,8 +1,9 @@
 #app-section1 {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #app-section1>div {
@@ -15,7 +16,7 @@
     margin: 20px 0px;
 }
 
-.container {
+#section1-container {
     margin-bottom: 50px;
 }
 
