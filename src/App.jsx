@@ -104,8 +104,8 @@ function App() {
           <div id='buttons-section3'>
             <button className='steps-button' onClick={() => setActiveSteps(1)}>
               <p>1.Download JS</p>
-              {activeSteps == 1 && <p>Obtain the necessary JavaScript files</p>}
-              {activeSteps == 1 && <a href="./scripts/graphGenerator.js" download='graphGenerator.js'>Download JS</a> }
+              {activeSteps == 1 && <p>To start using our application, download the necessary JavaScript files. These files contain the core functionality required for generating graphics dynamically.</p>}
+              {activeSteps == 1 && <a className='default-button' href="src/scripts/graphGenerator.js" download='graphGenerator.js'>Download JS</a> }
             </button>
 
             <button className='steps-button' onClick={() => setActiveSteps(2)}>

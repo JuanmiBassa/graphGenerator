@@ -36,6 +36,18 @@ input {
     box-shadow: var(--inset-shadow);
 }
 
+.default-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #66c6e9;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 100px;
+    text-decoration: none;
+}
+
 /* HEADER, ROOT.JSX */
 header {
     position: fixed;
