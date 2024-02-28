@@ -24,6 +24,26 @@ i18n
 
           title2App: 'ADVANTAGES',
 
+          easyTitle: 'Easy To Use',
+          easyText: 'This system has been designed with an intuitive interface for ease of use.',
+          customizeTitle: 'Customizable',
+          customizeText: 'This graphics system allows for complete customization of colors.',
+          freeTitle: 'Free',
+          freeText: 'This service is available free of charge to all users.',
+          dependenciesTitle: 'No Dependencies',
+          dependenciesText: 'This page does not require external dependencies for its correct functioning.',
+
+          title3App: 'How To Use',
+
+          step1Title: '1. Download JS',
+          step1Text: 'To start using our application, download the necessary JavaScript files. These files contain the core functionality required for generating graphics dynamically.',
+          step2Title: '2. Import Your Project',
+          step2Text: 'Link the files to your HTML. This step is crucial for integrating the functionality into your project seamlessly.',
+          step3Title: '3. Customize the default object',
+          step3Text: 'Adjust the code to your needs. Customize the default object to match your project requirements perfectly.',
+          step4Title: '4. Call global function',
+          step4Text: 'Utilize globally available functions. Call the functions anywhere in your project for enhanced functionality.',
+
           // DEMO
           titleDemo: 'Test the program',
 
@@ -55,6 +75,26 @@ i18n
           textButton2: 'Como Se Usa?',
 
           title2App: 'VENTAJAS',
+
+          easyTitle: 'Fàcil De Usar',
+          easyText: 'Este sistema ha sido diseñado con una interfaz intuitiva para facilitar su uso.',
+          customizeTitle: 'Personalizable',
+          customizeText: 'Este sistema gráfico permite una personalización completa de los colores.',
+          freeTitle: 'Gratis',
+          freeText: 'Este servicio está disponible de forma gratuita para todos los usuarios.',
+          dependenciesTitle: 'Sin dependencias',
+          dependenciesText: 'Esta página no requiere de dependencias externas para su correcto funcionamiento.',
+
+          title3App: 'Como Se Usa',
+
+          step1Title: '1. Descargar JS',
+          step1Text: 'Para comenzar a utilizar nuestra aplicación, descargue los archivos JavaScript necesarios. Estos archivos contienen la funcionalidad principal necesaria para generar gráficos dinámicamente.',
+          step2Title: '2. Importar tu proyecto',
+          step2Text: 'Vincula los archivos a tu HTML. Este paso es crucial para integrar la funcionalidad en su proyecto sin problemas.',
+          step3Title: '3. Personaliza el objeto predeterminado.',
+          step3Text: 'Ajusta el código a tus necesidades. Personalice el objeto predeterminado para que coincida perfectamente con los requisitos de su proyecto.',
+          step4Title: '4. Llamar a la función global',
+          step4Text: 'Utiliza funciones disponibles globalmente. Llama a las funciones en cualquier parte de su proyecto para obtener una funcionalidad mejorada.',
 
           // DEMO
           titleDemo: 'Testea el programa',

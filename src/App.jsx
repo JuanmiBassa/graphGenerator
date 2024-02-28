@@ -61,8 +61,8 @@ function App() {
               <FaScrewdriverWrench className='icon-card' />
             </div>
             <div className='text-section2'>
-              <h3>Easy To Use</h3>
-              <p>This system has been designed with an intuitive interface for ease of use.</p>
+              <h3>{t('easyTitle')}</h3>
+              <p>{t('easyText')}</p>
             </div>
           </div>
 
@@ -71,8 +71,8 @@ function App() {
               <IoColorFillSharp className='icon-card' />
             </div>
             <div className='text-section2'>
-              <h3>Customizable</h3>
-              <p>This graphics system allows for complete customization of colors.</p>
+              <h3>{t('customizeTitle')}</h3>
+              <p>{t('customizeText')}</p>
             </div>
           </div>
 
@@ -81,52 +81,48 @@ function App() {
               <FaSackDollar className='icon-card' />
             </div>
             <div className='text-section2'>
-              <h3>Free</h3>
-              <p>This service is available free of charge to all users.</p>
+              <h3>{t('freeTitle')}</h3>
+              <p>{t('freeText')}</p>
             </div>
           </div>
-
 
           <div className='card'>
             <div className='hexagon' id='hex4'>
               <FaUnlink className='icon-card' />
             </div>
             <div className='text-section2'>
-              <h3>No Dependencies</h3>
-              <p>This page does not require external dependencies for its correct functioning.</p>
+              <h3>{t('dependenciesTitle')}</h3>
+              <p>{t('dependenciesText')}</p>
             </div>
           </div>
-
-
         </div>
       </section>
 
-
       <section id='app-section3'>
-        <h1>How To Use</h1>
+        <h1>{t('title3App')}</h1>
         <div>
           <div id='buttons-section3'>
             <button className='steps-button' onClick={() => setActiveSteps(1)}>
-              <p>1. Download JS</p>
-              {activeSteps == 1 && <p>To start using our application, download the necessary JavaScript files. These files contain the core functionality required for generating graphics dynamically.</p>}
+              <p>{t('step1Title')}</p>
+              {activeSteps == 1 && <p>{t('step1Text')}</p>}
               {activeSteps == 1 && <a className='default-button' href="src/scripts/graphGenerator.js" download='graphGenerator.js'>Download JS</a>}
             </button>
 
             <button className='steps-button' onClick={() => setActiveSteps(2)}>
-              <p>2. Import Your Project</p>
-              {activeSteps == 2 && <p>Link the files to your HTML. This step is crucial for integrating the functionality into your project seamlessly.</p>}
+              <p>{t('step2Title')}</p>
+              {activeSteps == 2 && <p>{t('step2Text')}</p>}
             </button>
 
             <button className='steps-button' onClick={() => setActiveSteps(3)}>
-              <p>3. Customize the default object</p>
-              {activeSteps == 3 && <p>Adjust the code to your needs. Customize the default object to match your project requirements perfectly.</p>}
+              <p>{t('step3Title')}</p>
+              {activeSteps == 3 && <p>{t('step3Text')}</p>}
               {activeSteps == 3 && <Link className='default-button' to="/demo">Get Code</Link>}
 
             </button>
 
             <button className='steps-button' onClick={() => setActiveSteps(4)}>
-              <p>4. Call global function</p>
-              {activeSteps == 4 && <p>Utilize globally available functions. Call the functions anywhere in your project for enhanced functionality.</p>}
+              <p>{t('step4Title')}</p>
+              {activeSteps == 4 && <p>{t('step4Text')}</p>}
             </button>
           </div>
 
