@@ -9,13 +9,13 @@ import { useTranslation } from 'react-i18next'
 
 export default function Root() {
     const { t } = useTranslation();
+    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+    const toggleSettings = () => setIsSettingsOpen(!isSettingsOpen);
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
+        setIsSettingsOpen(false);
     };
-
-    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-    const toggleSettings = () => setIsSettingsOpen(!isSettingsOpen);
 
     return (
         <>
@@ -37,8 +37,8 @@ export default function Root() {
                         <li className='nav-list'>
                             <IoMdSettings className="settings-icon link-icon" onClick={toggleSettings} />
                             <div className={`settings-dropdown ${isSettingsOpen ? 'active' : ''}`}>
-                                <label htmlFor="languages">{t('modalLenguage')}</label>
-                                <select name="languages" id="languages" onChange={(event) => changeLanguage(event.target.value)}>
+                                <label htmlFor="select-languages">{t('modalLenguage')}</label>
+                                <select name="languages" id="select-languages" onChange={(event) => changeLanguage(event.target.value)}>
                                     <option value="en">{t('en')}</option>
                                     <option value="es">{t('es')}</option>
                                 </select>
