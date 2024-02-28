@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <section id='app-section1'>
-        <h1>{t('titleApp')}</h1>
+        <h1 id='principalTitle'>{t('titleApp')}</h1>
         <div id='section1-container'>
           <div>
             <h2>{t('subtitleApp')}</h2>

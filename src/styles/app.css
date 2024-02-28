@@ -260,3 +260,16 @@ h2 {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 768px) {
+    #principalTitle {
+        font-size: 40px;
+    }
+
+    #app-section1 h2 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+}
