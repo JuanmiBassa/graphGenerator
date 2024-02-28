@@ -50,7 +50,7 @@ function App() {
         </div>
       </section>
 
-      <section id='app-section2'>
+      <section id='app-section2' tabIndex="0">
         <div className='titulo'>
           <h2>{t('title2App')}</h2>
         </div>

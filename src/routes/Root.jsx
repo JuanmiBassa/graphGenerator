@@ -17,6 +17,12 @@ export default function Root() {
         setIsSettingsOpen(false);
     };
 
+    const enterKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            toggleSettings();
+        }
+    };
+
     return (
         <>
             <header>
@@ -35,7 +41,8 @@ export default function Root() {
                             <IoIosNotifications className="noti-icon link-icon" />
                         </li>
                         <li className='nav-list'>
-                            <IoMdSettings className="settings-icon link-icon" onClick={toggleSettings} />
+                            <IoMdSettings className="settings-icon link-icon" 
+                            onClick={toggleSettings} onKeyDown={enterKeyDown} tabIndex="0"/>
                             <div className={`settings-dropdown ${isSettingsOpen ? 'active' : ''}`}>
                                 <label htmlFor="select-languages">{t('modalLenguage')}</label>
                                 <select name="languages" id="select-languages" onChange={(event) => changeLanguage(event.target.value)}>
