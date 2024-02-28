@@ -60,13 +60,18 @@ h2 {
     justify-content: space-evenly;
 }
 
+#proveIt {
+    width: 35%;
+}
+
 #howToUse {
     background: var(--bg-light);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px;
+    min-width: 120px;
+    width: 35%;
     height: 35px;
     text-decoration: none;
     border-radius: 5px;
@@ -77,15 +82,25 @@ h2 {
     filter: brightness(1.2);
 }
 
+#frontPage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#frontPage-container>div {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    background: var(--bg-darkLight);
+    border-radius: 5px;
+}
+
 #frontPage-container>img {
+    position: relative;
     width: 80%;
 }
-
-
-.frontPage {
-    display: flex;
-}
-
 
 #app-section2 {
     text-align: center;
@@ -183,7 +198,6 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    align-items: center;
     justify-content: center;
 }
 
@@ -235,7 +249,6 @@ h2 {
 .steps img {
     width: 100%;
 }
-
 
 @media screen and (max-width: 1024px) {
     #buttons-section3 {

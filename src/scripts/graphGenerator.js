@@ -3,7 +3,7 @@ export default function generateGraph(dataGraph) {
     const ctx = canvas.getContext('2d');
 
     canvas.width = dataGraph.canvasProps.maxWidth;
-    canvas.height = dataGraph.canvasProps.height;
+    canvas.height = dataGraph.canvasProps.maxHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     let marks = dataGraph.scaleMarks - 1;

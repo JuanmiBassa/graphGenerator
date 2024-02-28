@@ -44,7 +44,7 @@ input {
     align-items: center;
     background: var(--default-button);
     border-radius: 5px;
-    width: 100px;
+    min-width: 100px;
     height: 35px;
     text-decoration: none;
     color: var(--bg-dark);

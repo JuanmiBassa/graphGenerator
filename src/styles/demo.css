@@ -1,30 +1,46 @@
 #demo-section {
+    width: 90%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
     border-radius: 5px;
-    width: 90%;
     margin: 30px 0px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-light-container) 0%, var(--bg-dark-container));
+}
+
+#graph-design-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 60%;
+    min-width: 300px;
+}
+
+#demo-section>div:last-child {
+    width: 40%;
+    min-width: 300px;
 }
 
 .demo-container {
     margin: 20px;
-    min-width: 100px;
+    min-width: 250px;
+    width: 40%;
 }
 
 .demo-container>div{
     display: flex;
 }
 
-#demo-section label {
+#graph-design-container label {
     color: var(--secondary-text);
     margin-bottom: 3px;
 }
 
 .test-input {
     border: none;
-    width: 100%;
+    width: calc(100% - 10px);
     padding: 10px 5px;
     border-radius: 5px;
     color: white;
@@ -37,16 +53,77 @@
     border-bottom: 1px var(--prym-red) solid;
 }
 
+#graph-color {
+    height: 36px;
+}
+
+.radio-style {
+    appearance: none;
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 0px 20px;
+    transition: background-position 0.2s;
+    outline: none;
+}
+
+.radio-style:active {
+    transform: scale(1.2);
+}
+
+.radio-style:checked {
+    background-position: 0px 0px;
+    background-image: radial-gradient(
+        white 0%, 
+        var(--prym-cyan-color) 15%, 
+        var(--prym-blue-color) 30%, 
+        transparent 60%);
+}
+
+#radio-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#radio-inputs {
+    display: flex;
+}
+
+#radio-container div {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+/* GRAPH DESIGN */
+#graph-values-container>div:last-child {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    max-height: 250px;
+    overflow-y: scroll;
+    padding-right: 15px;
+}
+
+#graph-values-container label {
+    color: var(--secondary-text);   
+}
+
+.inputsValues-container {
+    display: flex;
+    width: 100%;
+}
+
 .updateValues-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: 20px;
     min-width: 100px;
-}
-
-.values-container {
-    display: flex;
 }
 
 #removeValue {
@@ -86,52 +163,7 @@
     border-bottom: 1px var(--prym-cyan-color) solid;
 }
 
-#graph-color {
-    height: 36px;
-}
-
-.radio-style {
-    appearance: none;
-    margin: 5px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: 0px 20px;
-    transition: background-position 0.2s;
-    outline: none;
-}
-
-.radio-style:active {
-    transform: scale(1.2);
-}
-
-.radio-style:checked {
-    background-position: 0px 0px;
-    background-image: radial-gradient(
-        white 0%, 
-        var(--prym-cyan-color) 15%, 
-        var(--prym-blue-color) 30%, 
-        transparent 60%);
-}
-
-#radio-container {
-    display: flex;
-    justify-content: end;
-    flex-direction: column;
-}
-
-#radio-inputs {
-    display: flex;
-}
-
-#radio-container div {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
-
+/* GRAPH */
 #graph-section {
     width: 90%;
     display: flex;

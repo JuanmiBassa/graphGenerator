@@ -8,6 +8,10 @@ import { FaUnlink } from "react-icons/fa"
 import { useState, useEffect } from 'react'
 import frontPageImg from './assets/frontpage.png'
 import step1Img from './assets/step1.jpg'
+import step2Img from './assets/step2.jpg'
+import step3Img from './assets/step3.jpg'
+import step4Img from './assets/step4.jpg'
+
 
 function App() {
   const [activeSteps, setActiveSteps] = useState(1);
@@ -33,7 +37,7 @@ function App() {
             <h2>{t('subtitleApp')}</h2>
             <p className='text-section1'>{t('textFirstSection')}</p>
             <div className='buttons-section1'>
-              <Link className='default-button' to="/graph-test">{t('textButton1')}</Link>
+              <Link id='proveIt' className='default-button' to="/graph-test">{t('textButton1')}</Link>
               <a id='howToUse' href="#app-section3">{t('textButton2')}</a>
             </div>
           </div>
@@ -103,39 +107,41 @@ function App() {
         <div>
           <div id='buttons-section3'>
             <button className='steps-button' onClick={() => setActiveSteps(1)}>
-              <p>1.Download JS</p>
+              <p>1. Download JS</p>
               {activeSteps == 1 && <p>To start using our application, download the necessary JavaScript files. These files contain the core functionality required for generating graphics dynamically.</p>}
               {activeSteps == 1 && <a className='default-button' href="src/scripts/graphGenerator.js" download='graphGenerator.js'>Download JS</a>}
             </button>
 
             <button className='steps-button' onClick={() => setActiveSteps(2)}>
-              <p>2.Import Your Project</p>
+              <p>2. Import Your Project</p>
               {activeSteps == 2 && <p>Link the files to your HTML. This step is crucial for integrating the functionality into your project seamlessly.</p>}
             </button>
 
             <button className='steps-button' onClick={() => setActiveSteps(3)}>
-              <p>3.Customize the default object</p>
+              <p>3. Customize the default object</p>
               {activeSteps == 3 && <p>Adjust the code to your needs. Customize the default object to match your project requirements perfectly.</p>}
+              {activeSteps == 3 && <Link className='default-button' to="/demo">Get Code</Link>}
+
             </button>
 
             <button className='steps-button' onClick={() => setActiveSteps(4)}>
-              <p>4.Call global function</p>
+              <p>4. Call global function</p>
               {activeSteps == 4 && <p>Utilize globally available functions. Call the functions anywhere in your project for enhanced functionality.</p>}
             </button>
           </div>
 
           <div className='steps'>
             {activeSteps == 1 &&
-              <img src={step1Img} alt="" />
+              <img src={step1Img} alt="Img step 1" />
             }
             {activeSteps == 2 &&
-              <img src={step1Img} alt="" />
+              <img src={step2Img} alt="Img step 2" />
             }
             {activeSteps == 3 &&
-              <img src={step1Img} alt="" />
+              <img src={step3Img} alt="Img step 3" />
             }
             {activeSteps == 4 &&
-              <img src={step1Img} alt="" />
+              <img src={step4Img} alt="Img step 4" />
             }
           </div>
         </div>
