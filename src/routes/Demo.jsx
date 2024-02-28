@@ -5,9 +5,7 @@ import generateGraph from '../scripts/graphGenerator.js'
 import CodeMirrorJS from '../templates/CodeMirrorJS.jsx'
 import CodeMirrorHTML from '../templates/CodeMirrorHTML.jsx'
 import CodeMirrorCSS from '../templates/CodeMirrorCSS.jsx'
-import { FaPlus, FaMinus } from "react-icons/fa6";
-import { FaHtml5 } from "react-icons/fa6";
-import { FaCss3Alt } from "react-icons/fa6";
+import { FaPlus, FaMinus, FaHtml5, FaCss3Alt } from "react-icons/fa6";
 import { RiJavascriptFill } from "react-icons/ri";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -171,7 +169,7 @@ export default function Demo() {
                         <div className='inputsValues-container '>
                             <input type="number" placeholder='new value' className='test-input'
                                 onChange={(event) => setNewValue(event.target.value)} value={newValue} />
-                            <button onClick={() => addNewValue()} className='updateValues-button'><FaPlus /></button>
+                            <button onClick={() => addNewValue()} className='updateValues-button'><FaPlus aria-label="Add value" /></button>
                         </div>
                     </div>
 
@@ -179,8 +177,8 @@ export default function Demo() {
                         <label htmlFor="newValue">{t('graphDeleteValue')}</label>
                         {Array.from(valueMap.entries()).map(([id, value]) => (
                             <div key={id} className='inputsValues-container '>
-                                <input type="number" className='test-input' value={value} onChange={(event) => updateValue(id, event.target.value)} />
-                                <button onClick={() => removeValue(id)} className='updateValues-button'><FaMinus /></button>
+                                <input type="number" className='test-input' aria-label="Edit the value" value={value} onChange={(event) => updateValue(id, event.target.value)} />
+                                <button onClick={() => removeValue(id)} className='updateValues-button'><FaMinus aria-label="Remove value"/></button>
                             </div>
                         ))}
                     </div>
@@ -189,9 +187,9 @@ export default function Demo() {
 
             <section id='code-mirror-section'>
                 <div id='code-mirror-buttons'>
-                    <button className='button-html' onClick={() => setActiveCode(1)}><FaHtml5 /></button>
-                    <button className='button-css' onClick={() => setActiveCode(2)}><FaCss3Alt /></button>
-                    <button className='button-js' onClick={() => setActiveCode(3)}><RiJavascriptFill /></button>
+                    <button className='button-html' onClick={() => setActiveCode(1)}><FaHtml5  aria-label="See HTML code"/></button>
+                    <button className='button-css' onClick={() => setActiveCode(2)}><FaCss3Alt  aria-label="See CSS code"/></button>
+                    <button className='button-js' onClick={() => setActiveCode(3)}><RiJavascriptFill aria-label="See JS code"/></button>
                 </div>
                 <div id='code-mirror-container'>
                     {activeCode == 1 && <CodeMirrorHTML />}

@@ -21,7 +21,7 @@ export default function Root() {
         <>
             <header>
                 <div>
-                    <Link to="/" id="logo"><PiGraphFill /></Link>
+                    <Link to="/" id="logo" aria-label="logo homepage"><PiGraphFill /></Link>
                 </div>
                 <nav>
                     <ul>

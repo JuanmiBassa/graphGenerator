@@ -233,3 +233,9 @@ canvas {
     border-radius: 0px 0px 5px 5px;
     overflow: hidden;
 }
+
+/* CODE MIRROR AUTO */
+.cm-gutterElement,
+.cm-gutter {
+    color: var(--secondary-text);
+}
