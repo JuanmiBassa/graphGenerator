@@ -37,7 +37,7 @@ function App() {
             <h2>{t('subtitleApp')}</h2>
             <p className='text-section1'>{t('textFirstSection')}</p>
             <div className='buttons-section1'>
-              <Link id='proveIt' className='default-button' to="/graph-test">{t('textButton1')}</Link>
+              <Link id='proveIt' className='default-button' to="/demo">{t('textButton1')}</Link>
               <a id='howToUse' href="#app-section3">{t('textButton2')}</a>
             </div>
           </div>
