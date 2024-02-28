@@ -105,7 +105,7 @@ function App() {
             <button className='steps-button' onClick={() => setActiveSteps(1)}>
               <p>{t('step1Title')}</p>
               {activeSteps == 1 && <p>{t('step1Text')}</p>}
-              {activeSteps == 1 && <a className='default-button' href="src/scripts/graphGenerator.js" download='graphGenerator.js'>Download JS</a>}
+              {activeSteps == 1 && <a className='default-button' href="./graphGenerator.js" download='graphGenerator.js'>Download JS</a>}
             </button>
 
             <button className='steps-button' onClick={() => setActiveSteps(2)}>
